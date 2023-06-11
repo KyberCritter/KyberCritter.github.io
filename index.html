@@ -38,6 +38,11 @@
             color: #008CBA;
             border: 2px solid #008CBA;
         }
+        #github-repos {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -48,6 +53,25 @@
         <a href="https://www.linkedin.com/in/scott-ratchford/" target="_blank" class="profile-button">LinkedIn Profile</a>
         <a href="https://github.com/KyberCritter" target="_blank" class="profile-button">GitHub Profile</a>
         <a href="https://www.youtube.com/@scottratchford6119/" target="_blank" class="profile-button">YouTube Channel</a>
+        <div id="github-repos">
+            <h2>GitHub Repositories</h2>
+            <div id="repos"></div>
+        </div>
     </div>
+    <script>
+        fetch('https://api.github.com/users/KyberCritter/repos')
+            .then(response => response.json())
+            .then(data => {
+                const reposElement = document.getElementById('repos');
+                data.forEach(repo => {
+                    const repoElement = document.createElement('p');
+                    const repoLink = document.createElement('a');
+                    repoLink.href = repo.html_url;
+                    repoLink.textContent = repo.name;
+                    repoElement.appendChild(repoLink);
+                    reposElement.appendChild(repoElement);
+                });
+            });
+    </script>
 </body>
 </html>
