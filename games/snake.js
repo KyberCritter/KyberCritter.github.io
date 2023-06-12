@@ -3,6 +3,10 @@ window.onload = function () {
     ctx = canv.getContext("2d");
     document.addEventListener("keydown", keyPush);
     setInterval(game, 1000 / 12); // 12 frames per second
+    start_len = 5;  // starting length of the snake
+    unlocked_facts = [];
+    high_score = 0;
+    resetGame();
 }
 var wrapSwitch = document.getElementById("wrap");
 wrapSwitch.addEventListener("change", function () {
@@ -14,10 +18,10 @@ wrapSwitch.addEventListener("change", function () {
         wrap = false;
     }
 });
+
 all_facts = ["My favorite movie is Star Wars Episode III: Revenge of the Sith.\n",
                 "In my spare time, I attend University of Alabama sports games.\n",
                 "You can send me an email using the yellow button on the homepage!"];
-fact_index = 0;
 resetGame();
 fun_facts = [];
 function game() {
@@ -59,7 +63,7 @@ function game() {
     for (var i = 0; i < trail.length; i++) {
         ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2);
         if (trail[i].x == px && trail[i].y == py) {
-            tail = 5;
+            resetGame();
         }
     }
     // tail management
@@ -70,6 +74,7 @@ function game() {
     // apple
     if (ax == px && ay == py) {
         addFunFact();
+        high_score = Math.max(high_score, tail - start_len);    // update high score
         tail++;
         ax = Math.floor(Math.random() * tc);
         ay = Math.floor(Math.random() * tc);
@@ -106,19 +111,23 @@ function keyPush(evt) {
     }
 }
 function resetGame() {
-    px = py = 10;   // player x and y position
-    gs = tc = 20;   // grid size and tile count
-    ax = ay = 15;   // apple x and y position
-    xv = yv = 0;    // x and y velocity
-    trail = [];     // trail of the tail
-    tail = 5;       // length of the tail
+    px = py = 10;       // player x and y position
+    gs = tc = 20;       // grid size and tile count
+    ax = ay = 15;       // apple x and y position
+    xv = yv = 0;        // x and y velocity
+    trail = [];         // trail of the tail
+    tail = start_len;   // length of the tail
+    fact_index = 0;     // index of the fun fact
 }
 function addFunFact() {
-    fact_index = Math.floor(((tail - 5) / 3 % all_facts.length));
-    console.log(fact_index);
-    var facts_element = document.getElementById("fun-facts");
-    var new_fact = document.createTextNode(all_facts[fact_index]);
-    if(!facts_element.textContent.includes(new_fact.textContent)) {  // prevent duplicate facts
-        facts_element.appendChild(new_fact);
+    fact_index = Math.floor(((tail - start_len) / 3 % all_facts.length));
+    if(!(unlocked_facts.includes(all_facts[fact_index]))) { // check if fun fact is already unlocked
+        console.log("Unlocked fun fact: " + all_facts[fact_index]);
+        const newP = document.createElement("p");
+        newP.textContent = all_facts[fact_index];
+        document.body.appendChild(newP);
+        unlocked_facts.push(all_facts[fact_index]);
+    } else {
+        console.log("Error: fun fact \"" + all_facts[fact_index] + "\" already unlocked");
     }
 }
