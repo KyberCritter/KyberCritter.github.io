@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scott Ratchford's Website</title>
+    <title>Scott Ratchford</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -38,6 +38,42 @@
             color: #008CBA;
             border: 2px solid #008CBA;
         }
+        .game-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #9E1B32; 
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .game-button:hover {
+            background-color: white; 
+            color: #9E1B32;
+            border: 2px solid #9E1B32;
+        }
+        .contact-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #d8db0b; 
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .contact-button:hover {
+            background-color: white; 
+            color: #d8db0b;
+            border: 2px solid #d8db0b;
+        }
         #github-repos {
             margin-top: 20px;
             width: 100%;
@@ -47,12 +83,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Scott Ratchford's Website</h1>
-        <p>Scott Ratchford is a highly skilled student and professional with a rich experience in software development and 3D printing. This website is dedicated to showcasing his skills, achievements and professional journey.</p>
+        <h1>Welcome to ScottRatchford.com!</h1>
+        <p>My name is Scott Ratchford. I am a highly skilled student and professional with a rich experience in software development and 3D printing. This website is dedicated to showcasing my skills, achievements and professional journey.</p>
         <a href="./downloads/Scott_Ratchford_Resume.pdf" download class="resume-button">Download Resume</a>
         <a href="https://www.linkedin.com/in/scott-ratchford/" target="_blank" class="profile-button">LinkedIn Profile</a>
         <a href="https://github.com/KyberCritter" target="_blank" class="profile-button">GitHub Profile</a>
         <a href="https://www.youtube.com/@scottratchford6119/" target="_blank" class="profile-button">YouTube Channel</a>
+        <a href="./games/snake.html" target="_blank" class="game-button">Play Snake</a>
+        <a href="mailto:scott@scottratchford.com" target="_blank" class="contact-button">Email Me</a>
         <div id="github-repos">
             <h2>GitHub Repositories</h2>
             <div id="repos"></div>
