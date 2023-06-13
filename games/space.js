@@ -14,10 +14,12 @@ function game() {
     py += yv;
     // wrap around the screen
     if (px < 0) {
-        px = tc - 1;
+        // px = tc - 1;
+        px = 0;
     }
     if (px > tc - 1) {
-        px = 0;
+        // px = 0;
+        px = tc - 1;
     }
     // game area
     ctx.fillStyle = "black";
@@ -30,7 +32,7 @@ function game() {
         console.log("Laser on");
         ctx.fillStyle = "yellow";
         ctx.fillRect(px * gs, py * gs + gs - 2, gs - 2, (gs - 2) * laserLength);
-        laserTimer++;
+        // laserTimer++;    // increment laser timer
         if (laserTimer > laserMax) {
             laserOn = false;
             cooldown = laserMax;
