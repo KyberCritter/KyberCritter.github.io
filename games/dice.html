@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dice</title>
+    <style>
+        .toggle {
+            position: relative;
+            display: inline-flex;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    </style>
+</head>
+<body>
+    <h1>Dice</h1> <!-- Added header -->
+    <canvas id="gc" width="400" height="400"></canvas>
+    <script src="dice.js"></script>
+    <!-- button to roll die -->
+    <button onclick="rollD20()">Roll Die</button>
+</body>
+</html>

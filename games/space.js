@@ -65,11 +65,13 @@ function keyPush(evt) {
     switch (evt.keyCode) {
         case 37: // left arrow
             if (px < 0) break; // prevent player from going off the screen
-            xv = -1;
+            // xv = -1;
+            px -= 1;
             break;
         case 39: // right arrow
             if (px > 20) break; // prevent player from going off the screen
-            xv = 1;
+            // xv = 1;
+            px += 1;
             break;
         case 32: // spacebar
             if (laserOn == false) {
