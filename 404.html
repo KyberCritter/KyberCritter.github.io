@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ScottRatchford.com</title>
+    <title>404 Page Not Found</title>
     <style>
         body {
             background-color: #9e1b32;
@@ -28,7 +28,6 @@
             box-sizing: border-box;
         }
 
-
         header a {
             color: white;
             text-decoration: none;
@@ -38,18 +37,13 @@
             color: #9e1b32;
         }
 
-        .main-content {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 70px;
-        }
-
         .content {
             flex: 2;
-            margin: 20px;
-            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            background-color: #828a8f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 80vh;
         }
 
         footer {
@@ -62,6 +56,20 @@
             text-align: center;
             padding: 10px;
             box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .return-btn {
+            display: inline-block;
+            background-color: white;
+            color: #9e1b32;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .return-btn:hover {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
@@ -76,13 +84,9 @@
     </header>
     <div class="main-content">
         <div class="content">
-            <h1>Social Media</h1>
-            <h1>Welcome to ScottRatchford.com!</h1>
-            <img src="profile-placeholder.jpg" alt="Profile Picture of Scott Ratchford">
-            <p>Hello! I'm Scott Ratchford, a highly skilled student and professional with a rich experience in software
-                development and 3D printing. I am studying for my Bachelor's Degree in Computer Science and my Master's
-                Degree in Business Administration at the University of Alabama. Welcome to my website and enjoy your
-                stay!</p>
+            <h1>Oops!</h1>
+            <p>The page you were looking for doesn't seem to exist.</p>
+            <a href="index.html" class="return-btn">Go back home</a>
         </div>
     </div>
     <footer>
