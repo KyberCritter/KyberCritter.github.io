@@ -3,71 +3,71 @@
 	<url>
 		<loc>https://www.scottratchford.com</loc>
 		<priority>1.00</priority>
-		<lastmod>2023-05-29</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/articles.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-06-13</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/socials.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-06-12</lastmod>
+		<lastmod>2023-05-28</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/404.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2023-05-31</lastmod>
+		<lastmod>2023-05-30</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/game_review.html</loc>
-		<priority>0.50</priority>
-		<lastmod>2023-05-26</lastmod>
+		<loc>https://www.scottratchford.com/socials.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-06-11</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/articles.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-06-12</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/_layouts/media_review.html</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-05-18</lastmod>
+		<lastmod>2023-05-17</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/football_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-23</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/post.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-08</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/games/space.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-02-08</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/games/snake.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-02-07</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/default.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-07</lastmod>
+		<loc>https://www.scottratchford.com/_layouts/game_review.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2023-06-16</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/_includes/header.html</loc>
 		<priority>0.33</priority>
-		<lastmod>2023-05-09</lastmod>
+		<lastmod>2023-05-08</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/default.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/games/snake.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-02-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/games/space.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-02-07</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/post.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-07</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/football_review.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-22</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/articles/media-reviews/We-Love-Katamari-Reroll.html</loc>
 		<priority>0.25</priority>
-		<lastmod>2023-05-24</lastmod>
+		<lastmod>2023-05-23</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/articles/sports/Iron-Bowl-2022.html</loc>
 		<priority>0.00</priority>
-		<lastmod>2023-05-16</lastmod>
+		<lastmod>2023-05-15</lastmod>
 	</url>
 </urlset>
