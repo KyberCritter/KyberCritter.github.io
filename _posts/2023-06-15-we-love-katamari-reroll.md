@@ -1,9 +1,8 @@
 ---
-layout: game_review
+layout: media_review
 title: We Love Katamari REROLL+ Royal Reverie
 tags: [games, nintendo switch, reviews]
 date: 2023-06-15
-platform: Nintendo Switch
 score: 8
 ---
 
