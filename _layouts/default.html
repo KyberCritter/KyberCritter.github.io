@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <header>
+        <a href="/index.html" class="header-btn">Home</a>
+        <a href="/downloads/Scott_Ratchford_Resume.pdf" download class="header-btn">Resume</a>
+        <a href="/socials.html" class="header-btn">Social Media</a>
+        <a href="/work.html" class="header-btn">Work</a>
+        <a href="/games/snake.html" class="header-btn">Games</a>
+    </header>
+    <div class="main-content">
+        {{ content }}
+    </div>
+    <footer>
+        <p>&copy; {{ 'now' | date: "%Y" }} Scott Ratchford - All Rights Reserved</p>
+    </footer>
+</body>
+</html>

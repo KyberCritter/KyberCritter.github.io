@@ -3,35 +3,45 @@
 	<url>
 		<loc>https://www.scottratchford.com</loc>
 		<priority>1.00</priority>
-		<lastmod>2023-06-06</lastmod>
+		<lastmod>2023-06-02</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/articles.html</loc>
+		<loc>https://www.scottratchford.com/jekyll_test.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2023-06-15</lastmod>
 	</url>
 	<url>
+		<loc>https://www.scottratchford.com/articles.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-06-11</lastmod>
+	</url>
+	<url>
 		<loc>https://www.scottratchford.com/socials.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2023-04-08</lastmod>
+		<lastmod>2023-04-04</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/404.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2023-06-05</lastmod>
+		<lastmod>2023-06-01</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/games/space.html</loc>
 		<priority>0.33</priority>
-		<lastmod>2023-04-03</lastmod>
+		<lastmod>2023-03-30</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/games/snake.html</loc>
 		<priority>0.33</priority>
-		<lastmod>2023-04-02</lastmod>
+		<lastmod>2023-03-29</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/articles/example.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-06-09</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/default.html</loc>
 		<priority>0.33</priority>
 		<lastmod>2023-06-13</lastmod>
 	</url>
