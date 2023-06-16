@@ -72,7 +72,7 @@ footer {
 .article-content h4,
 .article-content h5,
 .article-content h6 {
-    color: white;
+    color: #828a8f;
 }
 
 .article-content p {
@@ -226,7 +226,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: white;
+    background-color: #828a8f;
     margin: 20px auto;
     padding: 20px;
     width: 80%;
