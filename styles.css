@@ -194,3 +194,19 @@ h3 {
     background-position: center;
     background-size: cover;
 }
+
+/* Social Styles */
+.social-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.social-sub-content {
+    flex: 2;
+    flex-shrink: 1;
+    margin: 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background-color: #828a8f;
+}
