@@ -4,4 +4,6 @@ This is my personal website, made to showcase me and further my development expe
 ## License
 Unless otherwise indicated, all content is copyright Scott Ratchford, all rights reserved.
 
-HTMLy is licensed under the GNU General Public License Version 2.
+Jeykll is used under the MIT License.
+
+All logos are trademarks of their respective owners.
