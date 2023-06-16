@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
+User-agent: *
+Disallow: /downloads/
+Disallow: /images/
+Disallow: /scripts/
+
 Sitemap: https://www.scottratchford.com/sitemap.xml

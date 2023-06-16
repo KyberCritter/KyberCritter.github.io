@@ -3,21 +3,26 @@
 	<url>
 		<loc>https://www.scottratchford.com</loc>
 		<priority>1.00</priority>
+		<lastmod>2023-06-15</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/socials.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-06</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/404.html</loc>
+		<priority>0.67</priority>
 		<lastmod>2023-06-14</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/games/space.html</loc>
 		<priority>0.33</priority>
-		<lastmod>2023-06-12</lastmod>
+		<lastmod>2023-05-01</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/games/snake.html</loc>
 		<priority>0.33</priority>
-		<lastmod>2023-06-11</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/games/dice.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-06-13</lastmod>
+		<lastmod>2023-04-30</lastmod>
 	</url>
 </urlset>
