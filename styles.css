@@ -1,5 +1,5 @@
 body {
-    background-color: #9e1b32;
+    background-color: #115fe5;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -28,7 +28,7 @@ header a {
 }
 
 header a:hover {
-    color: #9e1b32;
+    color: #115fe5;
 }
 
 .main-content {
@@ -81,7 +81,7 @@ footer {
 }
 
 .article-content a {
-    color: #9e1b32;
+    color: #115fe5;
     text-decoration: none;
 }
 
@@ -100,7 +100,7 @@ footer {
     padding: 10px 20px;
     color: #828a8f;
     background-color: white;
-    border-left: 5px solid #9e1b32;
+    border-left: 5px solid #115fe5;
 }
 
 .article-content ul,
@@ -114,7 +114,7 @@ footer {
 .return-btn {
     display: inline-block;
     background-color: white;
-    color: #9e1b32;
+    color: #115fe5;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -138,7 +138,7 @@ footer {
     margin-top: 20px;
     padding: 20px;
     background-color: #828a8f;
-    color: #9e1b32;
+    color: #115fe5;
     font-weight: bold;
     text-align: center;
     border-radius: 10px;
@@ -176,7 +176,7 @@ h3 {
     font-size: 1.5em;
     font-weight: bold;
     margin-top: 10px;
-    background-color: #9e1b32;
+    background-color: #115fe5;
     color: white;
     padding: 10px;
     border-radius: 10px;
