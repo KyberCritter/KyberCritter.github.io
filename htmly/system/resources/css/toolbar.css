@@ -1,0 +1,83 @@
+body {
+    padding-top: 30px
+}
+
+.admin-front .tb-admin,
+.all-posts .tb-posts,
+.admin-popular .tb-popular,
+.admin-mine .tb-mine,
+.admin-draft .tb-draft,
+.admin-content .tb-addcontent,
+.admin-categories .tb-categories,
+.edit-profile .tb-editprofile,
+.admin-import .tb-import,
+.admin-backup .tb-backup,
+.admin-config .tb-config,
+.admin-clear-cache .tb-clearcache,
+.admin-update .tb-update {
+    background:#400;
+}
+
+#toolbar {
+    background: #666;
+    box-shadow: 0 5px 15px #000;
+    color: #CCC;
+    font-family: Georgia, sans-serif;
+    left: 0;
+    margin: 0 -20px;
+    padding: 0 25px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 6000;
+    border: 0;
+    font-size: 15px;
+    text-align: left;
+    vertical-align: baseline;
+    min-height: 30px
+}
+
+#toolbar ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 30px;
+}
+
+#toolbar ul li, #toolbar ul li a {
+    display:inline-block;
+    list-style: none;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+#toolbar a {
+    color: #FFF;
+    font-size: .846em;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+@media all and (max-width: 550px) {
+    body {
+        padding-top: 60px
+    }
+}
+
+table#config td:first-child {
+    width: 30%
+}
+
+table#config td:last-child {
+    width: 70%
+}
+
+table#config input {
+    width: 100%;
+    box-sizing: border-box
+}
+
+table#config tr:last-child td {
+    border-bottom: none
+}
