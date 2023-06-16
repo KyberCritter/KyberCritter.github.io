@@ -233,3 +233,46 @@ h3 {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+
+.review-content h1,
+.review-content h2,
+.review-content h3,
+.review-content h4,
+.review-content h5,
+.review-content h6 {
+    color: white;
+}
+
+.review-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.review-content a {
+    color: #115fe5;
+    text-decoration: none;
+}
+
+.review-content a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.review-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.review-content blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: #828a8f;
+    background-color: white;
+    border-left: 5px solid #115fe5;
+}
+
+.review-content ul,
+.review-content ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
