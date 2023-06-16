@@ -1,22 +1,28 @@
+<!-- _layouts/media_review.html -->
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
-
 <body>
     {% include header.html %}
 
-    <div class="main-content">
+    <div class="main-content review-content">
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.date | date: "%B %d, %Y" }}</h2>
+
         {{ content }}
+
+        <div class="score-box">
+            <h3>Score: {{ page.score }}/10</h3>
+        </div>
     </div>
 
     <footer>
         <p>&copy; {{ 'now' | date: "%Y" }} Scott Ratchford - All Rights Reserved</p>
     </footer>
 </body>
-
 </html>
