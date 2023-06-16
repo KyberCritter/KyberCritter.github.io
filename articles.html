@@ -1,17 +1,9 @@
 ---
 layout: default
-title: Articles
+title: All Posts
 ---
 
-{% assign categories = site.articles | map: "category" | uniq %}
-{% for category in categories %}
-  <h2>{{ category }}</h2>
-  {% assign articles_in_category = site.articles | where: "category", category | sort: "date" | reverse %}
-  <ul>
-    {% for article in articles_in_category %}
-      <li>
-        <a href="{{ article.url }}">{{ article.title }}</a> ({{ article.date | date: "%B %d, %Y" }})
-      </li>
-    {% endfor %}
-  </ul>
+{% for post in site.posts %}
+  <h2>{{ post.title }}</h2>
+  <a href="{{ site.baseurl }}{{ post.url }}">Read More</a>
 {% endfor %}
