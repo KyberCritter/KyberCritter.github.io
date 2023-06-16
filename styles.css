@@ -1,0 +1,135 @@
+body {
+    background-color: #9e1b32;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #828a8f;
+    padding: 10px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #9e1b32;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.content {
+    flex: 2;
+    margin: 20px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    background-color: #828a8f;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #828a8f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* Article specific styles */
+.article-content {
+    max-width: 800px;
+    margin: 100px auto 60px;
+    padding: 20px;
+    background-color: #828a8f;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+    color: white;
+}
+
+.article-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.article-content a {
+    color: #9e1b32;
+    text-decoration: none;
+}
+
+.article-content a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-content blockquote {
+    margin: 20px 0;
+    padding: 10px 20px;
+    color: #828a8f;
+    background-color: white;
+    border-left: 5px solid #9e1b32;
+}
+
+.article-content ul,
+.article-content ol {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+
+/* Error page styles */
+.return-btn {
+    display: inline-block;
+    background-color: white;
+    color: #9e1b32;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.warning {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+}
