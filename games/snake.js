@@ -3,9 +3,9 @@ window.onload = function () {
     ctx = canv.getContext("2d");
     document.addEventListener("keydown", keyPush);
     setInterval(game, 1000 / 12); // 12 frames per second
-    start_len = 5;  // starting length of the snake
     unlocked_facts = [];
     high_score = 0;
+    start_len = 5;  // starting length of the snake
     resetGame();
 }
 var wrapSwitch = document.getElementById("wrap");
@@ -25,6 +25,8 @@ all_facts = ["My favorite movie is Star Wars Episode III: Revenge of the Sith.\n
 resetGame();
 fun_facts = [];
 function game() {
+    var score_display = document.getElementById("score-display");
+    score_display.textContent = "Score: " + (tail - start_len) + " | High Score: " + high_score;
     px += xv;
     py += yv;
     // wrap around the screen or reset game, depending on settings
