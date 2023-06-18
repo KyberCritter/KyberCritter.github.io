@@ -116,6 +116,12 @@ h1.centered-bold {
     padding-bottom: 50px;
 }
 
+.footer-link {
+    color: white;
+    text-decoration: none;    /* removes the underline */
+    /* font-size: 14px; */
+}
+
 /* Article and Review Specific Styles */
 .article-content p, .review-content p {
     margin-bottom: 20px;
