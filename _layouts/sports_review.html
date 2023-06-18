@@ -1,0 +1,23 @@
+---
+layout: default
+title: {{ page.title }}
+---
+
+<div class="content-container">
+    <div class="content">
+        <h1 class="centered-bold">{{ page.team1.name }} vs. {{ page.team2.name }} {{ page.season }}</h1>
+        <div class="team-logos">
+            <img src="{{ page.team1.logo }}" alt="{{ page.team1.name }} logo">
+            <span class="versus">vs.</span>
+            <img src="{{ page.team2.logo }}" alt="{{ page.team2.name }} logo">
+        </div>
+        <h3>{{ page.played-date | date: "%B %d, %Y" }}</h3>
+
+        {{ scores_table }}
+        
+        <h3>Published Date: {{ page.date | date: "%B %d, %Y" }}</h3>
+
+        <!-- Post content -->
+        {{ content }}
+    </div>
+</div>
