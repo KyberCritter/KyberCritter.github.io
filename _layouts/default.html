@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
@@ -10,8 +11,10 @@
 <body>
     {% include header.html %}
 
-    <div class="main-content">
-        {{ content }}
+    <div class="content-container">
+        <div class="main-content">
+            {{ content }}
+        </div>
     </div>
 
     <footer>

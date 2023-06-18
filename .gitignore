@@ -4,3 +4,8 @@ local_test.py
 # temporary
 .wellknown/
 example.*
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
