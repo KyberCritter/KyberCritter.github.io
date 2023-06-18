@@ -25,8 +25,8 @@ all_facts = ["My favorite movie is Star Wars Episode III: Revenge of the Sith.\n
 resetGame();
 fun_facts = [];
 function game() {
-    var score_display = document.getElementById("score-display");
-    score_display.textContent = "Score: " + (tail - start_len) + " | High Score: " + high_score;
+    // var score_display = document.getElementById("score-display");
+    // score_display.textContent = "Score: " + (tail - start_len) + " | High Score: " + high_score;
     px += xv;
     py += yv;
     // wrap around the screen or reset game, depending on settings

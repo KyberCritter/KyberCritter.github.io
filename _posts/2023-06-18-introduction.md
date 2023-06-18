@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Introduction to My Website
+date: 2023-06-18
+tags: [news]
 ---
 
 # Purpose

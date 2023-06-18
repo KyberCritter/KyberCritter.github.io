@@ -13,20 +13,25 @@ body {
     margin: 0;
 }
 
-header, footer {
+header {
     background-color: #828a8f;
     padding: 10px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-}
-
-header {
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+footer {
+    background-color: #828a8f;
+    padding: 10px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin-top: -50px;
 }
 
 header a, footer {
@@ -108,7 +113,7 @@ h1.centered-bold {
     padding: 20px;
     color: black;
     /* margin-top: 12px; */
-    margin-bottom: 12px;
+    padding-bottom: 50px;
 }
 
 /* Article and Review Specific Styles */
