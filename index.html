@@ -1,16 +1,158 @@
----
-layout: default
-title: ScottRatchford.com
----
+<!DOCTYPE html>
+<html lang="en">
 
-<h1 class="centered-bold">Welcome to ScottRatchford.com!</h1>
-<div class="content">
-    <img class="profile-picture" src="./images/scott.jpg" alt="Profile Picture of Scott Ratchford">
-    <div class="intro-text">
-        <p>Hello! I'm Scott Ratchford, a highly skilled student and professional with a rich experience in software
-            development and 3D printing. I am studying for my Bachelor's Degree in Computer Science and my Master's
-            Degree in Business Administration at the University of Alabama. Welcome to my website and enjoy your
-            stay!</p>
-        <p>To send me a message, check out my social media page.</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Ratchford's Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+    <a href="#home" class="active">Scott Ratchford</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="#intro">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#github">GitHub</a>
+        <a href="#resume">Resume</a>
+        <a href="#social-links">Connect</a>
+        <a href="#contact">Contact</a>
+        <a href="#public-key">Secure Contact</a>
+    </div>    
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <span>&#9776;</span> <!-- This is the Unicode character for the hamburger menu -->
+    </a>
     </div>
-</div>
+
+    <section class="intro">
+        <img src="./images/scott.jpg" alt="Scott Ratchford's Headshot" class="headshot">
+        <h1>Welcome to Scott Ratchford's Resume Website</h1>
+        <p>Computer Science student with a passion for 3D printing.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Scott</h2>
+        <p>Scott Ratchford is a highly skilled student and professional with a rich experience in software
+            development and 3D printing. He is studying for his Bachelor's Degree in Computer Science and Master's
+            Degree in Business Administration at the University of Alabama.</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project">
+            <h3>Glulam Production Automation App</h3>
+            <p>During my time at SmartLam North America, I've written a desktop app using Python and PyQt6. This application automatically generates production schedules for engineered wood products based on a customer's order. We use this tool to set up our production of hundreds of thousands of dollars of product weekly.</p>
+        </div>
+        <div class="project">
+            <h3>Resume Conversion Software</h3>
+            <p>I developed a simple app for SWJ Technology that converts Indeed-style resumes into the company's preferred Word format. The program is 90% accurate, which means users typcially just need to edit down the amount of content included, making the contract worker hiring process very simple.</p>
+        </div>
+    </section>
+
+    <section id="github" id="github">
+        <h2>Scott's GitHub Repositories</h2>
+        <div id="repo-list">Fetching repositories...</div>
+    </section>
+    <script src="./scripts/github-fetch.js"></script>
+    
+    <section class="resume-section" id="resume">
+        <h2>Scott's Resume</h2>
+        <iframe src="./downloads/Scott_Ratchford_Resume.pdf" width="100%" height="600px"></iframe>
+    </section>
+    
+    <section class="social-section" id="social-links">
+        <h2>Connect with Scott</h2>
+        <div class="social-container">
+            <a href="https://www.linkedin.com/in/scott-ratchford/" target="_blank">
+                <img src="./images/logos/linkedin.png" alt="LinkedIn Logo" class="social-logo">
+            </a>
+            <a href="https://www.youtube.com/@scottratchford6119" target="_blank">
+                <img src="./images/logos/youtube.png" alt="YouTube Logo" class="social-logo">
+            </a>
+        </div>
+        <p>Interested in collaborating or hiring? Reach out to Scott via email at <a href="mailto:contact@scottratchford.com">contact@scottratchford.com</a>.</p>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Secure Contact</h3>
+            <p>If you wish to send me an encrypted message, you can use my <a href="#public-key" class="key-link">public key</a>. Make sure you're familiar with PGP encryption. For any other inquiries, you can reach me at <a href="mailto:contact@scottratchford.com">contact@scottratchford.com</a>.</p>
+            <pre id="public-key">
+                -----BEGIN PGP PUBLIC KEY BLOCK-----
+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
+=4Ryb
+                -----END PGP PUBLIC KEY BLOCK-----
+            </pre>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+    
+            // Attach the function to the global scope so it can be called from the HTML
+            window.myFunction = myFunction;
+    
+            // Get all the links inside the menu
+            var menuLinks = document.querySelectorAll("#myLinks a");
+    
+            // Add a click event listener to each link
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener("click", function() {
+                    // Hide the menu when a link is clicked
+                    document.getElementById("myLinks").style.display = "none";
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>
