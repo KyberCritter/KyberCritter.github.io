@@ -1,335 +1,248 @@
-/* General Styles */
-body {
-    background-color: #115fe5;
-    color: white;
-    font-family: Arial, sans-serif;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    line-height: 1.5;
-    align-items: center;
-    height: 100vh;
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
     margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #828a8f;
-    padding: 10px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+:root {
+    --primary-color: #9E1B32; /* University of Alabama's crimson color */
+    --text-color: #fff;
+    --section-bg-color: #f4f4f4;
+    --alabama-light-gray: #A9A9A9; /* Alabama's light gray */
 }
 
-footer {
-    background-color: #828a8f;
-    padding: 10px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    margin-top: -50px;
-}
-
-header a, footer {
-    color: white;
-    text-align: center;
-}
-
-header a:hover {
-    color: #115fe5;
-}
-
-.main-content {
+/* Sticky header styles */
+.sticky-header {
     display: flex;
     justify-content: space-between;
-    /* margin-top: 20px; */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-title {
+    flex-grow: 1; /* Allow the title to take up as much space as possible */
+    text-align: center; /* Center the title text */
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.mobile-nav-button {
+    display: none; /* Hide the button by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-right: auto; /* Push the button to the left */
+}
+
+.mobile-nav-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--text-color); /* Make the button white */
+    margin: 4px 0;
+}
+
+.sticky-header ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow the links to wrap to the next line if there's not enough space */
+    justify-content: center; /* Center the links */
+}
+
+.sticky-header li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.sticky-header li a:hover {
+    color: #ddd;
+}
+
+/* Intro section styles */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f4f4f4;
+}
+
+.headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
-.content {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    color: black;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    width: 70vw;
+.intro h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.index-content {
+.intro p {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* Section styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+section:nth-of-type(odd) {
+    background-color: var(--section-bg-color); /* light gray */
+}
+
+section:nth-of-type(even) {
+    background-color: #ffffff; /* white */
+}
+
+.project {
+    margin: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .mobile-nav-button {
+        display: block; /* Show the button on mobile */
+    }
+
+    .nav-list {
+        display: none; /* Hide the navigation links by default on mobile */
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show the navigation links when the hamburger menu is active */
+    }
+}
+
+.github-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--section-bg-color);
+}
+
+.social-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--section-bg-color);
+}
+
+.social-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.5);
-}
-
-.article-content img, .review-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-.bio-content {
-    display: flex;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
 }
 
-h1.centered-bold {
-    text-align: center;
-    color: black;
-    font-size: 2.5em;
-    font-weight: bold;
-    text-shadow: 2px 2px #ddd;
+.social-logo {
+    width: 120px;
+    transition: transform 0.3s;
 }
 
-.profile-picture {
-    flex-shrink: 0;
-    width: 100px;
-    height: auto;
+.social-logo:hover {
+    transform: scale(1.1);
 }
 
-.intro-text {
-    flex-grow: 1;
-}
-
-.content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-    background-color: white;
-    padding: 20px;
-    color: black;
-    /* margin-top: 12px; */
-    padding-bottom: 50px;
-}
-
-.footer-link {
-    color: white;
-    text-decoration: none;    /* removes the underline */
-    /* font-size: 14px; */
-}
-
-/* Article and Review Specific Styles */
-.article-content p, .review-content p {
+h2 {
     margin-bottom: 20px;
-    line-height: 1.6;
 }
 
-.article-content a, .review-content a {
-    color: #115fe5;
-    text-decoration: none;
-    letter-spacing: 0.05em;
+ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-.article-content a:hover, .review-content a:hover {
-    color: white;
+footer {
+    background-color: var(--alabama-light-gray);
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.key-link {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
-.article-content blockquote, .review-content blockquote {
-    margin: 20px 0;
-    padding: 10px 20px;
-    color: #828a8f;
-    background-color: white;
-    border-left: 5px solid #115fe5;
-}
-
-.article-content ul, .article-content ol, .review-content ul, .review-content ol {
-    margin: 20px 0;
-    padding-left: 40px;
-}
-
-.article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6,
-.review-content h1, .review-content h2, .review-content h3, .review-content h4, .review-content h5, .review-content h6 {
-    color: #828a8f;
-}
-
-/* Error page styles */
-.return-btn {
+pre#public-key {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px;
+    overflow-x: auto;
+    max-width: 100%;
+    border-radius: 5px;
+    margin: 10px auto;
+    font-size: 0.8em;
+    text-align: left;
     display: inline-block;
-    background-color: white;
-    color: #115fe5;
-    padding: 10px 20px;
+}
+
+/* Style the navigation menu */
+.topnav {
+    overflow: hidden;
+    background-color: var(--primary-color); /* University of Alabama's crimson color */
+    position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+    display: none;
+    background-color: var(--alabama-light-gray); /* Alabama's light gray */
+}
+
+/* Style navigation menu links */
+.topnav a {
+    color: var(--text-color); /* White color */
+    padding: 14px 16px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.return-btn:hover {
-    background-color: #f2f2f2;
-}
-
-.warning {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 80vh;
-}
-
-/* Score Styles */
-
-.score-box {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #828a8f;
-    color: #115fe5;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.score-box h3 {
-    margin: 0;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    text-shadow: 4px 4px 2px #115fe5;
-}
-
-.teams {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.teams img {
-    height: 100px;
-    width: 100px;
-}
-
-.teams h3 {
-    margin: 0 20px;
-}
-
-h3 {
-    margin-top: 20px;
-}
-
-.scores {
-    background-color: #828a8f;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.team-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Adds some space between the logos */
-}
-
-.team-logos img {
-    width: 100px; /* Or any size you want */
-    height: auto;
-}
-
-.versus {
-    font-size: 2em; /* Adjust as needed */
-    font-weight: bold; /* Makes the text bold */
-}
-
-table {
-    border-collapse: collapse; /* Makes the borders collapse into a single line */
-    width: 100%; /* Makes the table take up the full width of its container */
-}
-
-table, th, td {
-    border: 1px solid black; /* Adds a border around the table and each cell */
-}
-
-th, td {
-    padding: 3px; /* Adds some padding inside each cell */
-    text-align: center; /* Centers the text in each cell */
-}
-
-
-.final-score {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-top: 10px;
-    background-color: #115fe5;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* Feed Styles */
-
-.repos {
-    flex: 1;
-    margin: 20px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    background-color: #828a8f;
-    /* background-image: url('path/to/your/image.jpg'); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-/* Social Styles */
-.social-content {
-    flex: 2;
-    flex-shrink: 1;
-    margin: 20px;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    background-color: #828a8f;
-    max-width: 75ch;
-    line-height: 1.5;
-}
-
-.sideways {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.logo-button {
+    font-size: 17px;
     display: block;
-    max-width: 50%;
-    height: auto;
-    background-color: #828a8f;
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
-.logo-button img {
-    width: 100%;
-    height: 100%;
-    background-color: #828a8f;
+/* Style the hamburger menu */
+.topnav a.icon {
+    background: var(--primary-color); /* University of Alabama's crimson color */
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-/* Post List Styles */
-.post-list {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    color: black;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+/* Hamburger icon styling */
+.topnav a.icon .fa {
+    color: var(--alabama-light-gray); /* Alabama's light gray */
+    font-size: 24px; /* Adjust size as needed */
+    padding: 14px 16px;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: var(--primary-color); /* Alabama's light gray */
+    color: var(--primary-color); /* University of Alabama's crimson color */
 }
