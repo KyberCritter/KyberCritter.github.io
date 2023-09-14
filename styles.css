@@ -265,6 +265,8 @@ pre#public-key {
     color: var(--alabama-light-gray); /* Alabama's light gray */
     font-size: 24px;
     padding: 14px 16px;
+    /* Dynamically scale the icon to 90% of the height of the navigation menu */
+    height: 90%;
 }
 
 /* Style the active link (or home/logo) */
@@ -359,4 +361,33 @@ pre#public-key {
     border-radius: 50%;
     background-color: var(--primary-color);
     z-index: 2;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 600px) {
+    /* Adjust the font size of the header */
+    header h1 {
+        font-size: 24px;
+    }
+    /* Adjust the padding of the timeline items */
+    .timeline-item {
+        padding: 10px;
+    }
+    /* Adjust the font size of the timeline item headings */
+    .timeline-item h2, .timeline-item h3 {
+        font-size: 18px;
+    }
+    /* Adjust the font size of the timeline item dates */
+    .timeline-item .date {
+        font-size: 14px;
+    }
+    /* Adjust the font size of the timeline item descriptions */
+    .timeline-item p {
+        font-size: 14px;
+    }
+    /* Adjust the padding of the return home button */
+    .return-home {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
