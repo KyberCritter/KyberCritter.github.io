@@ -3,81 +3,76 @@
 	<url>
 		<loc>https://www.scottratchford.com</loc>
 		<priority>1.00</priority>
-		<lastmod>2023-09-14</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/sports.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/socials.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/404.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-07-25</lastmod>
+		<lastmod>2023-09-13</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/work-history.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2023-08-09</lastmod>
+		<lastmod>2023-08-08</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/test.html</loc>
+		<loc>https://www.scottratchford.com/404.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2023-09-05</lastmod>
+		<lastmod>2023-07-24</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/games/snake.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
+		<loc>https://www.scottratchford.com/socials.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-14</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/sports_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/post.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/media_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/football_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/default.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-06-04</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_layouts/baseball_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_includes/header.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
-	</url>
-	<url>
-		<loc>https://www.scottratchford.com/_includes/football_scores.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
+		<loc>https://www.scottratchford.com/sports.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2023-05-14</lastmod>
 	</url>
 	<url>
 		<loc>https://www.scottratchford.com/_includes/baseball_scores.html</loc>
 		<priority>0.33</priority>
-		<lastmod>2023-05-15</lastmod>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_includes/football_scores.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_includes/header.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/baseball_review.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/default.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-06-03</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/football_review.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/media_review.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/post.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/_layouts/sports_review.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
+	</url>
+	<url>
+		<loc>https://www.scottratchford.com/games/snake.html</loc>
+		<priority>0.33</priority>
+		<lastmod>2023-05-14</lastmod>
 	</url>
 </urlset>
