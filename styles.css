@@ -167,6 +167,8 @@ ul {
     padding-left: 0;
 }
 
+/* Footer Styles */
+
 footer {
     background-color: var(--alabama-light-gray);
     color: #000;
@@ -179,10 +181,33 @@ footer {
     margin-bottom: 20px;
 }
 
-.footer-content {
+/* Secure Contact Section */
+
+.secure-contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--section-bg-color);
+}
+
+.public-key-section {
     max-width: 800px;
     margin: 0 auto;
     padding: 10px;
+}
+
+/* Social Section */
+
+.social-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--section-bg-color);
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .key-link {
@@ -227,9 +252,10 @@ pre#public-key {
 
 /* Style the hamburger menu */
 .topnav a.icon {
-    background: var(--primary-color); /* University of Alabama's crimson color */
+    background: none;
     display: block;
     position: absolute;
+    /* Place the icon in the top-right corner of the screen */
     right: 0;
     top: 0;
 }

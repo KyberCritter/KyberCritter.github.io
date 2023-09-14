@@ -1,6 +1,5 @@
 test.html
 /.vscode
-local_test.py
 # temporary
 .wellknown/
 example.*
@@ -9,4 +8,3 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-start.sh
