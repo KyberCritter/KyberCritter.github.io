@@ -44,7 +44,7 @@
         <a href="#public-key">Secure Contact</a>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" id="hamburger-icon">
         <span>&#9776;</span> <!-- This is the Unicode character for the hamburger menu -->
     </a>
     </div>
@@ -145,7 +145,6 @@ T6PevBInhNKRyVbld9/bRTNRrLaTWCeZKo4HoIgrro6rwL4uG0RUKJ4=
                 -----END PGP PUBLIC KEY BLOCK-----
             </pre>
         </div>
-        <p>Interested in collaborating or hiring? Reach out to Scott via email at <a href="mailto:contact@scottratchford.com">contact@scottratchford.com</a>.</p>
     </section>
 
     <script>
@@ -173,7 +172,32 @@ T6PevBInhNKRyVbld9/bRTNRrLaTWCeZKo4HoIgrro6rwL4uG0RUKJ4=
                 });
             }
         });
+        document.addEventListener("DOMContentLoaded", function() {
+        function toggleMenu() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        window.toggleMenu = toggleMenu;
+        // Get the hamburger icon by its ID
+        var hamburgerIcon = document.getElementById("hamburger-icon");
+        // Add event listeners for click
+        hamburgerIcon.addEventListener("click", toggleMenu);
+        // Get all the links inside the menu
+        var menuLinks = document.querySelectorAll("#myLinks a");
+        // Add a click event listener to each link
+        for (var i = 0; i < menuLinks.length; i++) {
+            menuLinks[i].addEventListener("click", function() {
+                // Hide the menu when a link is clicked
+                document.getElementById("myLinks").style.display = "none";
+            });
+        }
+    });
+
     </script>
-    
 </body>
 </html>

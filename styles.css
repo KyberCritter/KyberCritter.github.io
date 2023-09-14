@@ -263,7 +263,7 @@ pre#public-key {
 /* Hamburger icon styling */
 .topnav a.icon .fa {
     color: var(--alabama-light-gray); /* Alabama's light gray */
-    font-size: 24px; /* Adjust size as needed */
+    font-size: 24px;
     padding: 14px 16px;
 }
 
@@ -288,7 +288,6 @@ pre#public-key {
     background-color: var(--alabama-light-gray);
 }
 
-/* Timeline styling */
 /* Work History Timeline Styles */
 .work-history {
     padding: 50px 20px;
