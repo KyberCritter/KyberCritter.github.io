@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon or Digimon Image Classifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #prediction, #confidence {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>TensorFlow.js Image Classifier</h2>
+    <p>Select an image to classify:</p>
+    <input type="file" id="imageUpload">
+    <br>
+    <button onclick="classifyImage()">Classify</button>
+    <div>
+        <p id="prediction"></p>
+        <p id="confidence"></p>
+    </div>
+
+    <script>
+        let model;
+
+        async function loadModel() {
+            model = await tf.loadLayersModel('model/model.json');
+        }
+
+        loadModel();
+
+        function classifyImage() {
+            const imageUpload = document.getElementById('imageUpload');
+            const image = new Image();
+            image.src = URL.createObjectURL(imageUpload.files[0]);
+            image.onload = async () => {
+                const tensor = tf.browser.fromPixels(image)
+                    .resizeNearestNeighbor([100, 100])
+                    .toFloat()
+                    .expandDims();
+                const predictions = model.predict(tensor);
+                const highestPredictionIndex = predictions.argMax(-1).dataSync()[0];
+                const confidence = predictions.max().dataSync()[0];
+
+                if(highestPredictionIndex == 0) {
+                    document.getElementById('prediction').innerText = `Prediction: Pokemon`;
+                } else {
+                    document.getElementById('prediction').innerText = `Prediction: Digimon`;
+                }
+                document.getElementById('confidence').innerText = `Confidence: ${(confidence * 100).toFixed(2)}%`;
+            };
+        }
+    </script>
+</body>
+</html>
