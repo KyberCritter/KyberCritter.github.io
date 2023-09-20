@@ -430,7 +430,7 @@ input[type="file"] {
 #uploadedImage {
     display: block;
     margin: 20px auto; /* Center the image horizontally */
-    max-height: 400px; /* Adjust as needed */
+    max-height: 400px;
 }
 
 .custom-file-upload {
