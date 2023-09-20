@@ -46,6 +46,9 @@
                 .resizeNearestNeighbor([128, 128])
                 .toFloat()
                 .expandDims();
+
+                console.log(tensor.shape);  // This should log [1, 128, 128, 3]
+
                 const predictions = model.predict(tensor);
                 const highestPredictionIndex = predictions.argMax(-1).dataSync()[0];
                 const confidence = predictions.max().dataSync()[0];
