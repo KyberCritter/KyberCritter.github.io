@@ -1,32 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Classifier to identify Pokemon or Digimon.">
+    <meta name="keywords" content="Scott Ratchford, Image Classifier, Pokemon, Digimon">
+    <meta name="author" content="Scott Ratchford">
+
+    <meta property="og:title" content="Pokemon or Digimon Image Classifier">
+    <meta property="og:description" content="Image Classifier to identify Pokemon or Digimon.">
+    <meta property="og:image" content="./images/scott.jpg">
+    <meta property="og:url" content="https://www.scottratchford.com/identifymon">
+
     <title>Pokemon or Digimon Image Classifier</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        #prediction, #confidence {
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
 </head>
+
 <body>
-    <h2>Pokemon or Digimon Image Classifier</h2>
-    <p>Select an image to classify:</p>
-    <input type="file" id="imageUpload">
-    <br>
-    <button onclick="classifyImage()">Classify</button>
-    <div>
-        <p id="prediction"></p>
-        <p id="confidence"></p>
+    <div class="topnav">
+        <a href="https://www.scottratchford.com" class="active">Scott Ratchford</a>
+        <!-- <a href="javascript:void(0);" class="icon" id="hamburger-icon">
+            <span>&#9776;</span>
+        </a> -->
     </div>
+
+    <section class="intro">
+        <h2>Pokemon or Digimon Image Classifier</h2>
+        <p>Select an image to classify:</p>
+        <input type="file" id="imageUpload" style="display: none;">
+        <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none; max-width: 100%; margin-top: 20px;">
+        <label for="imageUpload" class="custom-file-upload">Choose File</label>
+        <br>
+        <button onclick="classifyImage()">Classify</button>
+        <div>
+            <p id="prediction"></p>
+            <p id="confidence"></p>
+        </div>
+    </section>
+    
 
     <script>
         let model;
@@ -39,15 +52,16 @@
 
         function classifyImage() {
             const imageUpload = document.getElementById('imageUpload');
+            const uploadedImage = document.getElementById('uploadedImage');
             const image = new Image();
             image.src = URL.createObjectURL(imageUpload.files[0]);
+            uploadedImage.src = image.src;
+            uploadedImage.style.display = 'block';
             image.onload = async () => {
                 const tensor = tf.browser.fromPixels(image)
                 .resizeNearestNeighbor([128, 128])
                 .toFloat()
                 .expandDims();
-
-                console.log(tensor.shape);  // This should log [1, 128, 128, 3]
 
                 const predictions = model.predict(tensor);
                 const highestPredictionIndex = predictions.argMax(-1).dataSync()[0];
@@ -61,6 +75,27 @@
                 document.getElementById('confidence').innerText = `Confidence: ${(confidence * 100).toFixed(2)}%`;
             };
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            function toggleMenu() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+
+        });
+        document.getElementById('imageUpload').addEventListener('change', function() {
+            const imageUpload = document.getElementById('imageUpload');
+            const uploadedImage = document.getElementById('uploadedImage');
+            uploadedImage.src = URL.createObjectURL(imageUpload.files[0]);
+            uploadedImage.onload = function() {
+                uploadedImage.style.display = 'block';
+            };
+        });
+
     </script>
 </body>
 </html>
