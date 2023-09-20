@@ -18,7 +18,7 @@
     </style>
 </head>
 <body>
-    <h2>TensorFlow.js Image Classifier</h2>
+    <h2>Pokemon or Digimon Image Classifier</h2>
     <p>Select an image to classify:</p>
     <input type="file" id="imageUpload">
     <br>
@@ -43,9 +43,9 @@
             image.src = URL.createObjectURL(imageUpload.files[0]);
             image.onload = async () => {
                 const tensor = tf.browser.fromPixels(image)
-                    .resizeNearestNeighbor([100, 100])
-                    .toFloat()
-                    .expandDims();
+                .resizeNearestNeighbor([128, 128])
+                .toFloat()
+                .expandDims();
                 const predictions = model.predict(tensor);
                 const highestPredictionIndex = predictions.argMax(-1).dataSync()[0];
                 const confidence = predictions.max().dataSync()[0];
