@@ -447,3 +447,33 @@ input[type="file"] {
 .custom-file-upload:hover {
     background-color: var(--alabama-light-gray);
 }
+
+/* GitHub Page Styles */
+.repo {
+    border: 1px solid var(--alabama-light-gray);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Resume Page Styles */
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+h1, h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p, ul {
+    margin-bottom: 20px;
+}
+
+iframe {
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
