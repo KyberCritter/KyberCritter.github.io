@@ -9,6 +9,8 @@ body, p, ul, li {
 
 h1, h2 {
     margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 0;
     font-family: Arial, sans-serif;
     color: var(--primary-color);
@@ -79,8 +81,6 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
-    background-color: #f4f4f4;
 }
 
 .headshot {
@@ -104,10 +104,10 @@ a {
 
 /* Section styles */
 section {
-/*     padding: 5px 20%; */
     text-align: left;
-    padding-block: 0.2%;
+    padding-block: 1%;
     padding-inline: 20%;
+    padding-top: 1.5%;
     padding-bottom: 1.5%;
 }
 
@@ -294,15 +294,6 @@ footer {
         padding: 8px 16px;
         font-size: 14px;
     }
-}
-
-h1, h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-p, ul {
-    margin-bottom: 20px;
 }
 
 iframe {

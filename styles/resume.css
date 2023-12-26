@@ -1,6 +1,14 @@
 @import "variables";
 
 /* Resume Page Styles */
+section {
+    padding: 5px 20%;
+    text-align: left;
+    padding-block: 1%;
+    padding-inline: 20%;
+    padding-bottom: 1.5%;
+}
+
 .resume-container {
     max-width: 800px;
     margin: 0 auto;
