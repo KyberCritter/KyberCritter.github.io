@@ -8,3 +8,5 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+# localhost setup command
+host.bat

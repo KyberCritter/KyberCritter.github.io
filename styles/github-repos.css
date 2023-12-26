@@ -1,0 +1,9 @@
+@import "variables.css";
+
+/* GitHub Page Styles */
+.repo {
+    border: 1px solid var(--alabama-light-gray);
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
