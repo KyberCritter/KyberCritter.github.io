@@ -173,7 +173,6 @@ section:nth-of-type(even) {
 
 footer {
     background-color: var(--alabama-light-gray);
-    color: #000;
     padding: 20px 0;
     text-align: center;
 }
@@ -305,3 +304,4 @@ iframe {
     text-decoration: none;
     margin: 20px 15px;
 }
+
