@@ -16,6 +16,10 @@ h1, h2 {
     color: var(--primary-color);
 }
 
+h1 {
+    font-size: xx-large;
+}
+
 a {
     color: var(--primary-color);
     text-decoration-color: var(--primary-color);
@@ -256,21 +260,6 @@ footer {
     color: var(--primary-color); /* University of Alabama's crimson color */
 }
 
-.return-home {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: var(--alt-text-color);
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.return-home:hover {
-    background-color: var(--alabama-light-gray);
-}
-
 /* Media queries for responsive design */
 @media only screen and (max-width: 600px) {
     /* Adjust the font size of the header */
@@ -300,7 +289,20 @@ footer {
     }
 }
 
+/* PDF resume embed */
 iframe {
     border: 1px solid var(--primary-color);
     border-radius: 5px;
+}
+
+.button {
+    background-color: var(--primary-color); /* University of Alabama's crimson color */
+    color: var(--alt-text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin: 20px 15px;
 }
