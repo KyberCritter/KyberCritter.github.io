@@ -21,6 +21,10 @@ a {
     text-decoration-color: var(--primary-color);
 }
 
+ul {
+    padding-inline-start: 20px;
+}
+
 /* Sticky header styles */
 .sticky-header {
     display: flex;
