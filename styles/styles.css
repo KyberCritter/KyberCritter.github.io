@@ -127,7 +127,11 @@ section:nth-of-type(even) {
 }
 
 .project {
-    margin: 20px 0;
+
+}
+
+.subproject {
+    
 }
 
 /* Responsive styles */
@@ -304,4 +308,3 @@ iframe {
     text-decoration: none;
     margin: 20px 15px;
 }
-
