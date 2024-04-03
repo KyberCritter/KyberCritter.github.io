@@ -20,6 +20,11 @@ h1 {
     font-size: xx-large;
 }
 
+h3 {
+    font-family: Arial, sans-serif;
+    color: var(--primary-color);
+}
+
 a {
     color: var(--primary-color);
     text-decoration-color: var(--primary-color);
@@ -119,19 +124,23 @@ section {
 }
 
 section:nth-of-type(odd) {
-    background-color: var(--section-bg-color); /* light gray */
+    background-color: var(--section-bg-color);
 }
 
 section:nth-of-type(even) {
-    background-color: #ffffff; /* white */
+    background-color: #ffffff;
+}
+
+#quick-link {
+    text-align: center;
 }
 
 .project {
-
+    margin-bottom: 25px;
 }
 
 .subproject {
-    
+    margin-bottom: 20px;
 }
 
 /* Responsive styles */
@@ -176,6 +185,8 @@ section:nth-of-type(even) {
 /* Footer Styles */
 
 footer {
+    display: fixed;
+    bottom: 0px;
     background-color: var(--alabama-light-gray);
     padding: 20px 0;
     text-align: center;

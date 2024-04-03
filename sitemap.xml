@@ -1,78 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.scottratchford.com</loc>
+		<loc>https://scottratchford.com</loc>
 		<priority>1.00</priority>
-		<lastmod>2023-09-13</lastmod>
+		<lastmod>2024-04-03</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/work-history.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-08-08</lastmod>
+		<loc>https://scottratchford.com/work-history.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2024-01-04</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/404.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-07-24</lastmod>
+		<loc>https://scottratchford.com/resume.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2024-04-03</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/socials.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/portfolio.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2024-04-03</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/sports.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/github.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2023-12-27</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_includes/baseball_scores.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/contact.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2024-01-04</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_includes/football_scores.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/about.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2024-04-03</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_includes/header.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/404.html</loc>
+		<priority>0.75</priority>
+		<lastmod>2024-01-04</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/baseball_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/scripts/menu.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2023-12-27</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/default.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-06-03</lastmod>
+		<loc>https://scottratchford.com/projects/pygskin.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-04-03</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/football_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/projects/identifymon.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/media_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/projects/conference_analysis_2024.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-03-06</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/post.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/projects/conference_analysis_2023.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-03-05</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/_layouts/sports_review.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/projects/conference_analysis.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-03-04</lastmod>
 	</url>
 	<url>
-		<loc>https://www.scottratchford.com/games/snake.html</loc>
-		<priority>0.33</priority>
-		<lastmod>2023-05-14</lastmod>
+		<loc>https://scottratchford.com/projects/colley_rankings_index.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_postseason.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-02-28</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_9.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_8.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_7.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_6.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_5.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_4.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_3.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_2.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_15.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_14.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_13.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_12.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_11.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_10.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_1.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley_rankings_2023_0.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-01-04</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/colley-rankings/colley-rankings-latest.html</loc>
+		<priority>0.50</priority>
+		<lastmod>2024-02-28</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/projects/pygskin/kalen_deboer_playcalling.html</loc>
+		<priority>0.25</priority>
+		<lastmod>2024-04-03</lastmod>
+	</url>
+	<url>
+		<loc>https://scottratchford.com/projects/pygskin/kalen_deboer_machine_learning.html</loc>
+		<priority>0.25</priority>
+		<lastmod>2024-04-03</lastmod>
 	</url>
 </urlset>

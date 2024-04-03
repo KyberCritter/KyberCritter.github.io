@@ -6,4 +6,4 @@ Disallow: /downloads/
 Disallow: /images/
 Disallow: /scripts/
 
-Sitemap: https://www.scottratchford.com/sitemap.xml
+Sitemap: https://scottratchford.com/sitemap.xml
