@@ -1,72 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Resume of Scott Ratchford, experienced in computer science and mathematics.">
-    <meta name="keywords" content="Scott Ratchford, Resume, computer science and mathematics">
-    <meta name="author" content="Scott Ratchford">
-    <meta property="og:title" content="Scott Ratchford's Resume">
-    <meta property="og:description" content="Resume of Scott Ratchford, experienced in computer science and mathematics.">
-    <meta property="og:image" content="/images/scott.jpg">
-    <meta property="og:url" content="https://scottratchford.com">
-    <title>Scott Ratchford's Resume</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <meta name="keywords" content="Scott Ratchford, Resume, software developer, computer science, mathematics">
+    <title>Scott Ratchford | Software Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Placeholder for the menu -->
-    <div id="menu-placeholder"></div>
-    
-    <section class="intro">
-        <img src="/images/scott.jpg" alt="Scott Ratchford's Headshot" class="headshot">
-        <h1>Welcome to Scott Ratchford's Resume Website</h1>
-        <p>Software Developer and MBA student at the University of Alabama.</p>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Scott Ratchford</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="/images/scott_square.jpg" alt="Scott Ratchford Headshot">
+            </div>
+            
+            <div class="hero-description">
+                <h1>Hi, I'm Scott Ratchford</h1>
+                <p>I'm a passionate software developer and MBA student with expertise in full-stack development, machine learning, and 3D printing. I love solving complex problems and creating innovative solutions. Let's build something together!</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
     </section>
 
-    <section id="quick-link">
-        <a href="https://pygskin.com?utm_source=personal+website&utm_medium=website&utm_campaign=initial_launch" class="button">My Favorite Project - Pygskin</a>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I recently received my Bachelor of Computer Science from the University of Alabama. I'm now a graduate student studying for my Masters in Business Administration through the STEM Path to the MBA. I've been working as a software developer for SmartLam North America since May 2023.</p>
+            <p>I love to combine my professional skills with my hobbies to create projects I'm truly passionate about! For example, I spend a lot of time analyzing college football teams, coaches, and players in between watching them play.</p>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul id="skills-list">
+                    <!-- Skills will be loaded dynamically here -->
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section id="overview">
-        <h2>Website Overview</h2>
-        <p>Hello! I'm Scott Ratchford. Welcome to my official website. Here, I've documented my professional journey and laid out my portfolio. My personal and academic projects are hosted on GitHub repositories, and I'm developing interactive web versions of my greatest hits. Feel free to explore my website and connect with me on LinkedIn. I'm always looking for new opportunities to learn and grow.</p>
-        <br>
-        <p>Click the headers of each section to visit that webpage, or use the hamburger menu at the top to navigate.</p>
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div id="project-list">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
     </section>
 
-    <section id="about-overview">
-        <a href="/about.html">
-            <h2>About Scott</h2>
-        </a>
-        <p>I recently received my Bachelor of Computer Science from the University of Alabama. I'm now a graduate student studying for my Masters in Business Administration through the STEM Path to the MBA. I've been working as a software developer for SmartLam North America since May 2023.</p>
+    <section id="github">
+        <div class="container">
+            <h2>My GitHub Repositories</h2>
+            <ul id="github-repos-list">
+                <!-- Repositories will be dynamically loaded here -->
+            </ul>
+        </div>
     </section>
 
-    <section id="resume-overview">
-        <a href="/resume.html">
-            <h2>Resume</h2>
-        </a>
-        <p>My experience primarily lies in software development and 3D printing. I'm specifically developing my skills in software engineering, machine learning, and business administration. You can find the particulars of my employment and education here.</p>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/scott-ratchford/" target="_blank" class="contact-link">LinkedIn</a>
+            </div>
+            <div class="contact-links">
+                <a href="mailto:contact@scottratchford.com" class="contact-link">Email: contact@scottratchford.com</a>
+            </div>
+            <p>For more ways to contact me, including secure communication, visit the <a href="/contact.html">Contact Page</a>.</p>
+            <div class="business-card-container">
+                <a href="/downloads/Scott Ratchford's Business Card.png" download><img id="business-card" src="/downloads/Scott Ratchford's Business Card.png" alt="Business Card"></a>
+            </div>
+            <div class="contact-links">
+                <h2>Resume PDF (<a style="text-decoration: underline;" href="/downloads/Scott_Ratchford_Resume.pdf" download>Download</a>)</h2>
+                <iframe src="/downloads/Scott_Ratchford_Resume.pdf" width="80%" height="600px"></iframe>
+            </div>
+        </div>
     </section>
 
-    <section id="portfolio-overview">
-        <a href="/portfolio.html">
-            <h2>Portfolio</h2>
-        </a>
-        <p>Among my various professional projects, I've developed software to automate production scheduling for engineering wood products and software to convert resumes between file formats.</p>
-    </section>
-    
-    <section id="github-overview">
-        <a href="/github.html">
-            <h2>GitHub</h2>
-        </a>
-        <p>You can find my public GitHub repositories here. These include some of my favorite data analysis, machine learning, and data visualization projects.</p>
-    </section>
-    
-    <script src="/js/loadMenu.js"></script>
     <footer>
-        <p>&copy; 2024 Scott Ratchford - All Rights Reserved</p>
+        <div class="container">
+            <p>&copy; 2024 Scott Ratchford. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
+
+    <!-- JavaScript for Loading Data -->
+    <script src="/js/navmenu.js"></script>
+    <script src="/js/skills.js"></script>
+    <script src="/js/projects.js"></script>
+    <script src="/js/github.js"></script>
 </body>
 </html>
