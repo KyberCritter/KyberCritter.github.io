@@ -452,6 +452,22 @@ nav {
     margin-top: 2rem;
 }
 
+/* Ensure long text like URLs and email addresses wrap properly */
+.contact-links a, p a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all; /* This will ensure long words break in smaller views */
+}
+
+/* Specific for the contact section in mobile */
+@media (max-width: 768px) {
+    .contact-links a {
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
 /* Business Card Container */
 .business-card-container {
     display: flex;
