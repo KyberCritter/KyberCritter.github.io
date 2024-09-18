@@ -78,12 +78,60 @@ nav {
     cursor: pointer;
 }
 
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .hamburger span {
     height: 3px;
     width: 25px;
     background: #333;
     margin-bottom: 4px;
     border-radius: 5px;
+}
+
+/* Mobile Menu */
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* Hero Section */
@@ -336,11 +384,46 @@ nav {
     color: #555;
 }
 
-/* Contact Section */
+#github {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#github h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#github-repos-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+#github-repos-list li {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    position: relative;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#github-repos-list li:hover {
+    background-color: #0056b3;
+}
+
+
 /* Contact Section */
 #contact {
     padding: 4rem 0;
-    background-color: #f9f9f9;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -367,6 +450,28 @@ nav {
 #contact p {
     font-size: 1rem;
     margin-top: 2rem;
+}
+
+/* Business Card Container */
+.business-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#business-card {
+    max-width: 80%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.business-card-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
@@ -458,4 +563,29 @@ footer .social-links a:hover {
     .skill-bubbles {
         bottom: -5px;
     }
+}
+
+/* Resume Section */
+.resume-container {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.resume-container h1, .resume-container h2, .resume-container h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.resume-container p, .resume-container ul {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.resume-container iframe {
+    margin-top: 2rem;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
