@@ -16,11 +16,27 @@
 			"Pygskin"
 		]
 	},
+	"Django": {
+		"description": "Python's Django web development framework",
+		"used_in": [
+			"Bachelors of Computer Science",
+			"Software Developer at SmartLam North America",
+			"Pygskin"
+		]
+	},
 	"3D Printing": {
 		"description": "Operation, programming, and maintance for 3D printers",
 		"used_in": [
 			"Technical Support at The Cube",
 			"3D Design Intern at NGE Equipment"
+		]
+	},
+	"Machine Learning": {
+		"description": "Machine learning",
+		"used_in": [
+			"Bachelors of Computer Science",
+			"Software Developer at SmartLam North America",
+			"Pygskin"
 		]
 	},
 	"Version Control": {
@@ -31,14 +47,6 @@
 			"Pygskin",
 			"Object Filtering Module",
 			"3D Design Intern at NGE Equipment"
-		]
-	},
-	"Machine Learning": {
-		"description": "Machine learning",
-		"used_in": [
-			"Bachelors of Computer Science",
-			"Software Developer at SmartLam North America",
-			"Pygskin"
 		]
 	}
 }
