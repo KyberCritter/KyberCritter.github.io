@@ -1,0 +1,37 @@
+{
+    "Pygskin": {
+        "start_year": 2023,
+        "end_year": null,
+        "skills_used": ["Python", "Full-Stack Development", "Machine Learning", "Data Analytics", "Web Development", "API"],
+        "description": "A college football analysis project that predicts play calls, ranks teams, and explains conference alignment using machine learning and data analysis techniques. I began the project myself, and I continued it as a mananger",
+        "link": "https://pygskin.com"
+    },
+    "Engineered Wood Products Manufacturing Scheduling Application": {
+        "start_year": 2023,
+        "end_year": null,
+        "skills_used": ["Python", "PyQt6", "Full-Stack Development", "Version Control"],
+        "description": "A desktop application to automatically generate production schedules for engineered wood products, developed for SmartLam North America.",
+        "link": null
+    },
+    "Identifymon": {
+        "start_year": 2020,
+        "end_year": 2020,
+        "skills_used": ["Machine Learning", "JavaScript", "Neural Networks"],
+        "description": "A machine learning model classifying images as Pokemon or Digimon, converted to run in a web browser using JavaScript.",
+        "link": "https://github.com/KyberCritter/identifymon"
+    },
+    "Resume Conversion Software": {
+        "start_year": 2022,
+        "end_year": 2022,
+        "skills_used": ["Python", "Full-Stack Development", "Version Control"],
+        "description": "An application developed for SWJ Technology to convert Indeed-style resumes into the company's preferred Word format, simplifying the hiring process.",
+        "link": null
+    },
+    "Object Filtering Python Module": {
+        "start_year": 2024,
+        "end_year": null,
+        "skills_used": ["Python", "Version Control", "JSON"],
+        "description": "A rules engine module for Python. Used to ensure that arbitrary objects meet specific criteria.",
+        "link": "https://github.com/KyberCritter/Object-Filtering"
+    }
+}

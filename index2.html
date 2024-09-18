@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Ratchford | Software Developer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons (Optional) -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrQkTyYaeCjYFcwJ/s1V1G30q+4S9qY6Kv4h9VjBSfCvIq8Bxe5GjaXvxgVb66bBDH8BW7M9f+ZSTxAlqA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#">Scott Ratchford</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-container">
+            <!-- Left section: Portrait -->
+            <div class="hero-image">
+                <img src="/images/scott_square.jpg" alt="Scott Ratchford Headshot">
+            </div>
+            
+            <!-- Right section: Description and CTA -->
+            <div class="hero-description">
+                <h1>Hi, I'm Scott Ratchford</h1>
+                <p>I'm a passionate software developer with expertise in full-stack development, machine learning, and 3D printing. I love solving complex problems and creating innovative solutions. Let's build something together!</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I recently received my Bachelor of Computer Science from the University of Alabama. I'm now a graduate student studying for my Masters in Business Administration through the STEM Path to the MBA. I've been working as a software developer for SmartLam North America since May 2023.</p>
+            <p>I love to combine my professional skills with my hobbies to create projects I'm truly passionate about! For example, I spend a lot of time analyzing college football teams, coaches, and players in between watching them play.</p>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul id="skills-list">
+                    <!-- Skills will be loaded dynamically via JavaScript -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div id="project-list">
+                <!-- Projects can be dynamically loaded as well, but for now will be manually defined here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            
+            <!-- Large LinkedIn Link -->
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/scott-ratchford/" target="_blank" class="contact-link">LinkedIn</a>
+            </div>
+            
+            <!-- Large Email Link -->
+            <div class="contact-links">
+                <a href="mailto:contact@scottratchford.com" class="contact-link">Email: contact@scottratchford.com</a>
+            </div>
+
+            <!-- Body-sized text for more contact options -->
+            <p>For more ways to contact me, including secure communication, visit the <a href="/contact.html">Contact Page</a>.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Scott Ratchford. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <!-- Add more social icons as needed -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Loading Data -->
+    <script src="/js/skills.js"></script>
+    <script src="/js/projects.js"></script>
+</body>
+</html>
