@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         skillItem.title = "No description available."; // Fallback text if no description is present
                     }
 
-                    // Create skill bubbles container (optional if you want to keep the bubble feature)
+                    // Create skill bubbles container
                     const skillBubbles = document.createElement('div');
                     skillBubbles.classList.add('skill-bubbles');
                     

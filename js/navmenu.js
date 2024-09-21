@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hamburger.classList.toggle('active');
     });
 
-    // Close the menu when a navigation link is clicked (optional for smoother UX)
+    // Close the menu when a navigation link is clicked
     const navItems = document.querySelectorAll('.nav-links li a');
     navItems.forEach(item => {
         item.addEventListener('click', function () {

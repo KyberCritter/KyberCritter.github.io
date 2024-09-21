@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         const projectLinkButton = document.createElement('a');
                         projectLinkButton.href = projectData.link;
                         projectLinkButton.textContent = "Project Page";
-                        projectLinkButton.classList.add('btn'); // Assuming you have a .btn class for buttons
+                        projectLinkButton.classList.add('btn');
                         projectItem.appendChild(projectLinkButton);
                     }
 
