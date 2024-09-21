@@ -1,3 +1,11 @@
+:root {
+    --med-blue: #007BFF;
+    --dark-blue: #0056b3;
+    --ua-crimson: #9E1B32;
+    --ua-gray: #A9A9A9;
+    --dark-crimson: #7a1428;
+}
+
 /* Base Styles */
 * {
     margin: 0;
@@ -34,6 +42,18 @@ img {
 
 .link {
     text-decoration: underline;
+}
+
+.link-button {
+    background-color: var(--med-blue);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin: 20px 15px;
 }
 
 /* Header and Navigation */
@@ -74,7 +94,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #007BFF;
+    color: var(--med-blue);
 }
 
 /* Hamburger Menu (Mobile) */
@@ -143,18 +163,18 @@ nav {
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background-color: #007BFF;
+    background-color: var(--med-blue);
     color: #fff;
     border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: var(--dark-blue);
 }
 
 .big-link:hover {
-    color: #0056b3;
+    color: var(--dark-blue);
 }
 
 /* Footer */
@@ -173,7 +193,7 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-    color: #007BFF;
+    color: var(--med-blue);
 }
 
 /* Responsive Styles */

@@ -1,0 +1,12 @@
+#rankings {
+    max-width: fit-content;
+}
+
+#rankings a, p {
+    text-align: left;
+    max-width: 40vw;
+}
+
+#rankings-links {
+    max-width: 40vw;
+}
