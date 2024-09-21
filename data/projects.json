@@ -14,8 +14,8 @@
         "link": null
     },
     "Identifymon": {
-        "start_year": 2020,
-        "end_year": 2020,
+        "start_year": 2023,
+        "end_year": 2023,
         "skills_used": ["Machine Learning", "JavaScript", "Neural Networks"],
         "description": "A machine learning model classifying images as Pokemon or Digimon, converted to run in a web browser using JavaScript.",
         "link": "https://github.com/KyberCritter/identifymon"

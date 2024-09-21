@@ -6,7 +6,12 @@
 		"position_type": "full-time",
 		"city": "Dothan",
 		"state": "Alabama",
-		"country": "USA"
+		"country": "USA",
+		"description": [
+			"Develop Python-base software to optimize production scheduling",
+			"Conduct analysis to align software with manufacturing needs",
+			"Automate inventory management using Zoho Creator"
+		]
 	},
 	"The University of Alabama College of Engineering": {
 		"title": "Technical Support",
@@ -15,7 +20,12 @@
 		"position_type": "part-time",
 		"city": "Tuscaloosa",
 		"state": "Alabama",
-		"country": "USA"
+		"country": "USA",
+		"description": [
+			"Operating 3D printers, scanners, and laser cutter",
+			"Managing order queue",
+			"Creating 3D models in CAD software, especially SolidWorks"
+		]
 	},
 	"NGE Equipment": {
 		"title": "3D Design Intern",
@@ -24,7 +34,12 @@
 		"position_type": "internship",
 		"city": "Tuscaloosa",
 		"state": "Alabama",
-		"country": "USA"
+		"country": "USA",
+		"description": [
+			"Operated and maintained 3D printers for prototyping",
+			"Programming 3D printers directly with G-code and scripted for Cura",
+			"Coded in Python with Kivy framework"
+		]
 	},
 	"Vartek Services": {
 		"title": "Intern",
@@ -33,7 +48,8 @@
 		"position_type": "internship",
 		"city": "El Dorado",
 		"state": "Arkansas",
-		"country": "USA"
+		"country": "USA",
+		"description": null
 	},
 	"Brookshire Grocery Company": {
 		"title": "Cashier",
@@ -42,6 +58,7 @@
 		"position_type": "part-time",
 		"city": "El Dorado",
 		"state": "Arkansas",
-		"country": "USA"
+		"country": "USA",
+		"description": null
 	}
 }
