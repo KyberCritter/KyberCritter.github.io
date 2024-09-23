@@ -1,16 +1,12 @@
-@import "variables.css";
-
-/* Pokemon or Digimon Image Classifier styles */
-body {
-    background-color: var(--section-bg-color); /* light gray */
-}
+@import "styles.css";
 
 h2 {
-    color: var(--primary-color); /* University of Alabama's crimson color */
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
+
 button, .custom-file-upload {
-    background-color: var(--primary-color); /* University of Alabama's crimson color */
+    background-color: var(--ua-crimson);
     color: var(--alt-text-color);
     border: none;
     padding: 10px 20px;
@@ -30,11 +26,10 @@ button:hover, .custom-file-upload:hover {
     justify-content: space-between;
 }
 
-#prediction,
-#confidence {
+#prediction, #confidence {
     font-weight: bold;
     margin-top: 20px;
-    color: var(--primary-color); /* University of Alabama's crimson color */
+    color: var(--ua-crimson);
 }
 
 input[type="file"] {
@@ -43,7 +38,21 @@ input[type="file"] {
 
 #uploadedImage {
     display: block;
-    margin: 20px auto; /* Center the image horizontally */
+    margin: 20px auto;
     max-height: 400px;
 }
 
+#loading-spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+#uploaded-image {
+    display: none;
+    max-width: 100%;
+    margin-top: 20px;
+}
