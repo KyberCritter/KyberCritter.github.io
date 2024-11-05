@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="United States Presidential Election Simulator">
+        <meta name="keywords" content="USA, Election, President">
+        <meta name="author" content="Scott Ratchford">
+        <title>US Presidential Election Simulator</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
+        <script defer src="https://data.pygskin.com/script.js" data-website-id="932d953a-77fc-4bd2-9071-1f18004f736f" data-domains="scottratchford.com"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+            .vote-counts {
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                font-size: large;
+            }
+            .vote-count {
+                margin: 0 20px;
+            }
+            .status {
+                font-size: 1.2em;
+                margin-top: 10px;
+                color: #333;
+            }
+            .map-container {
+                max-width: 1000px;
+                margin: 20px auto;
+            }
+            .unassigned {
+                fill: #f0f0f0;
+                stroke: #666;
+                stroke-width: 1;
+            }
+            .red {
+                fill: #ffcccc;
+                stroke: #666;
+                stroke-width: 1;
+            }
+            .blue {
+                fill: #ccccff;
+                stroke: #666;
+                stroke-width: 1;
+            }
+            .state {
+                cursor: pointer;
+                transition: fill 0.3s;
+            }
+            .state-label {
+                font-size: 10px;
+                fill: #333;
+                cursor: pointer;
+                pointer-events: auto;
+            }
+            .line {
+                stroke: #333;
+                stroke-width: 1;
+            }
+            .bar-container {
+                width: 100%;
+                height: 30px;
+                margin: 20px 0;
+                background-color: #f0f0f0;
+                position: relative;
+            }
+            .bar-segment {
+                height: 100%;
+                position: absolute;
+            }
+            .blue-segment {
+                background-color: #4f83cc;
+            }
+            .gray-segment {
+                background-color: #cccccc;
+            }
+            .red-segment {
+                background-color: #cc4f4f;
+            }
+            .threshold-line {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background-color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Placeholder for the menu -->
+        <div id="menu-placeholder"></div>
+        
+        <h1>US Presidential Election Simulator</h1>
+        <div class="vote-counts">
+            <div class="vote-count" id="blue-votes">Blue: 0</div>
+            <div class="vote-count" id="unassigned-votes">Unassigned: 538</div>
+            <div class="vote-count" id="red-votes">Red: 0</div>
+        </div>
+        <div class="status" id="status">Election Status: Ongoing</div>
+        <div class="bar-container" id="bar-container">
+            <div class="bar-segment blue-segment" id="blue-segment"></div>
+            <div class="bar-segment gray-segment" id="gray-segment"></div>
+            <div class="bar-segment red-segment" id="red-segment"></div>
+            <div class="threshold-line" id="blue-threshold"></div>
+            <div class="threshold-line" id="red-threshold"></div>
+        </div>
+        <div class="map-container">
+            <svg id="us-map" width="960" height="600"></svg>
+        </div>
+
+        <script src="/js/navmenu_all.js"></script>
+        <script>
+            // Electoral votes for each state
+            const stateVotes = {
+                "01": 9,  // Alabama
+                "02": 3,  // Alaska
+                "04": 11, // Arizona
+                "05": 6,  // Arkansas
+                "06": 54, // California
+                "08": 10, // Colorado
+                "09": 7,  // Connecticut
+                "10": 3,  // Delaware
+                "11": 3,  // District of Columbia
+                "12": 30, // Florida
+                "13": 16, // Georgia
+                "15": 4,  // Hawaii
+                "16": 4,  // Idaho
+                "17": 19, // Illinois
+                "18": 11, // Indiana
+                "19": 6,  // Iowa
+                "20": 6,  // Kansas
+                "21": 8,  // Kentucky
+                "22": 8,  // Louisiana
+                "23": 4,  // Maine
+                "24": 10, // Maryland
+                "25": 11, // Massachusetts
+                "26": 15, // Michigan
+                "27": 10, // Minnesota
+                "28": 6,  // Mississippi
+                "29": 10, // Missouri
+                "30": 4,  // Montana
+                "31": 5,  // Nebraska
+                "32": 6,  // Nevada
+                "33": 4,  // New Hampshire
+                "34": 14, // New Jersey
+                "35": 5,  // New Mexico
+                "36": 28, // New York
+                "37": 16, // North Carolina
+                "38": 3,  // North Dakota
+                "39": 17, // Ohio
+                "40": 7,  // Oklahoma
+                "41": 8,  // Oregon
+                "42": 19, // Pennsylvania
+                "44": 4,  // Rhode Island
+                "45": 9,  // South Carolina
+                "46": 3,  // South Dakota
+                "47": 11, // Tennessee
+                "48": 40, // Texas
+                "49": 6,  // Utah
+                "50": 3,  // Vermont
+                "51": 13, // Virginia
+                "53": 12, // Washington
+                "54": 4,  // West Virginia
+                "55": 10, // Wisconsin
+                "56": 3   // Wyoming
+            };
+
+            // Postal codes for each state by ID (as strings with leading zeros)
+            const statePostalCodes = {
+                "01": "AL", "02": "AK", "04": "AZ", "05": "AR", "06": "CA", "08": "CO",
+                "09": "CT", "10": "DE", "12": "FL", "13": "GA", "15": "HI", "16": "ID",
+                "17": "IL", "18": "IN", "19": "IA", "20": "KS", "21": "KY", "22": "LA",
+                "23": "ME", "24": "MD", "25": "MA", "26": "MI", "27": "MN", "28": "MS",
+                "29": "MO", "30": "MT", "31": "NE", "32": "NV", "33": "NH", "34": "NJ",
+                "35": "NM", "36": "NY", "37": "NC", "38": "ND", "39": "OH", "40": "OK",
+                "41": "OR", "42": "PA", "44": "RI", "45": "SC", "46": "SD", "47": "TN",
+                "48": "TX", "49": "UT", "50": "VT", "51": "VA", "53": "WA", "54": "WV",
+                "55": "WI", "56": "WY", "11": "DC"
+            };
+
+            const smallNortheasternStates = ["09", "10", "23", "25", "33", "44", "50", "24", "34", "11"];
+
+            let blueVotes = 0;
+            let redVotes = 0;
+            let unassignedVotes = 538;
+
+            function updateVoteCounts() {
+                document.getElementById('blue-votes').textContent = `Blue: ${blueVotes}`;
+                document.getElementById('unassigned-votes').textContent = `Unassigned: ${unassignedVotes}`;
+                document.getElementById('red-votes').textContent = `Red: ${redVotes}`;
+
+                // Update the bar segments
+                const totalVotes = 538;
+                const blueWidth = (blueVotes / totalVotes) * 100;
+                const grayWidth = (unassignedVotes / totalVotes) * 100;
+                const redWidth = (redVotes / totalVotes) * 100;
+
+                document.getElementById('blue-segment').style.width = `${blueWidth}%`;
+                document.getElementById('gray-segment').style.width = `${grayWidth}%`;
+                document.getElementById('gray-segment').style.left = `${blueWidth}%`;
+                document.getElementById('red-segment').style.width = `${redWidth}%`;
+                document.getElementById('red-segment').style.left = `${blueWidth + grayWidth}%`;
+
+                // Update threshold markers
+                const thresholdPercent = (270 / totalVotes) * 100;
+                document.getElementById('blue-threshold').style.left = `${thresholdPercent}%`;
+                document.getElementById('red-threshold').style.left = `${100 - thresholdPercent}%`;
+
+                // Check if an election winner is declared
+                const status = document.getElementById('status');
+                if (blueVotes >= 270) {
+                    status.textContent = "Election Status: Blue Wins!";
+                    status.style.color = "#4f83cc";
+                } else if (redVotes >= 270) {
+                    status.textContent = "Election Status: Red Wins!";
+                    status.style.color = "#cc4f4f";
+                } else {
+                    status.textContent = "Election Status: Ongoing";
+                    status.style.color = "#333";
+                }
+            }
+
+            function toggleState(stateId) {
+                const votes = stateVotes[stateId] || 0;
+                const statePath = d3.select(`path[data-id='${stateId}']`);
+                const currentClass = statePath.attr("class");
+
+                // Reset class
+                statePath.attr("class", "state");
+
+                if (currentClass.includes("unassigned")) {
+                    statePath.classed("red", true);
+                    redVotes += votes;
+                    unassignedVotes -= votes;
+                } else if (currentClass.includes("red")) {
+                    statePath.classed("blue", true);
+                    redVotes -= votes;
+                    blueVotes += votes;
+                } else if (currentClass.includes("blue")) {
+                    statePath.classed("unassigned", true);
+                    blueVotes -= votes;
+                    unassignedVotes += votes;
+                }
+
+                updateVoteCounts();
+            }
+
+            // Create the map using D3.js
+            const svg = d3.select("#us-map");
+            const path = d3.geoPath();
+            const projection = d3.geoAlbersUsa().scale(1000).translate([480, 300]);
+
+            // Load the TopoJSON data for the US
+            d3.json("https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json").then(us => {
+                // Draw states with clickable color-cycling
+                svg.append("g")
+                    .selectAll("path")
+                    .data(topojson.feature(us, us.objects.states).features)
+                    .enter().append("path")
+                    .attr("class", "state unassigned")
+                    .attr("d", path.projection(projection))
+                    .attr("data-id", d => String(d.id).padStart(2, '0'))
+                    .on("click", function(event, d) {
+                        const stateId = String(d.id).padStart(2, '0');
+                        toggleState(stateId);
+                    });
+
+                // Add labels and lines for small northeastern states
+                smallNortheasternStates.forEach(stateId => {
+                    const stateFeature = topojson.feature(us, us.objects.states).features.find(
+                        feature => String(feature.id).padStart(2, '0') === stateId
+                    );
+
+                    if (stateFeature) {
+                        const centroid = path.centroid(stateFeature);
+                        var labelX = 850; // Position labels off to the right
+                        var labelY = centroid[1];
+
+                        // Apply custom vertical offsets for specific states
+                        if (stateId === "50") { // Vermont (VT)
+                            labelY -= 10; // Move label upwards
+                        } else if (stateId === "25") { // Massachusetts (MA)
+                            labelY -= 10; // Move label upwards
+                        } else if (stateId === "09") { // Connecticut (CT)
+                            labelY += 10; // Move label downwards
+                        } else if (stateId === "11") { // District of Columbia (DC)
+                            labelY += 10; // Move label downwards
+                        } else if (stateId === "10") { // Delaware (DE)
+                            labelY -= 10; // Move label upwards
+                        }
+
+                        // Draw line from state centroid to label
+                        svg.append("line")
+                            .attr("class", "line")
+                            .attr("x1", centroid[0])
+                            .attr("y1", centroid[1])
+                            .attr("x2", labelX)
+                            .attr("y2", labelY);
+
+                        // Draw label
+                        svg.append("text")
+                            .attr("class", "state-label")
+                            .attr("x", labelX + 5) // Offset label to the right of the line
+                            .attr("y", labelY)
+                            .attr("data-id", stateId)
+                            .text(statePostalCodes[stateId])
+                            .on("click", () => toggleState(stateId));
+                    }
+                });
+
+                // Adjust labels for specific states that need fine-tuning
+                const statesToAdjust = ["22", "12", "26", "06", "15", "02"];
+                statesToAdjust.forEach(stateId => {
+                    const stateFeature = topojson.feature(us, us.objects.states).features.find(
+                        feature => String(feature.id).padStart(2, '0') === stateId
+                    );
+
+                    if (stateFeature) {
+                        const centroid = path.centroid(stateFeature);
+                        let labelX = centroid[0];
+                        let labelY = centroid[1];
+
+                        // Apply fine-tuned adjustments for specified states
+                        if (stateId === "22") { // Louisiana (LA)
+                            labelX -= 15;
+                        } else if (stateId === "12") { // Florida (FL)
+                            labelX += 5;
+                        } else if (stateId === "26") { // Michigan (MI)
+                            labelX += 3;
+                            labelY += 5;
+                        } else if (stateId === "06") { // California (CA)
+                            labelX -= 15;
+                        } else if (stateId === "15") { // Hawaii (HI)
+                            labelX += 9;
+                            labelY += 15;
+                        } else if (stateId === "02") { // Alaska (AK)
+                            labelX -= 5;
+                            labelY -= 5;
+                        }
+
+                        // Draw label
+                        svg.append("text")
+                            .attr("class", "state-label")
+                            .attr("x", labelX)
+                            .attr("y", labelY)
+                            .attr("data-id", stateId)
+                            .text(statePostalCodes[stateId])
+                            .on("click", () => toggleState(stateId));
+                    }
+                });
+
+                // Add regular labels for other states
+                svg.append("g")
+                    .selectAll("text")
+                    .data(topojson.feature(us, us.objects.states).features)
+                    .enter().append("text")
+                    .filter(d => !smallNortheasternStates.includes(String(d.id).padStart(2, '0')) & !statesToAdjust.includes(String(d.id).padStart(2, '0')))
+                    .attr("class", "state-label")
+                    .attr("x", d => path.centroid(d)[0])
+                    .attr("y", d => path.centroid(d)[1])
+                    .attr("text-anchor", "middle")
+                    .attr("dy", ".35em")
+                    .text(d => statePostalCodes[String(d.id).padStart(2, '0')] || "")
+                    .on("click", function(event, d) {
+                        const stateId = String(d.id).padStart(2, '0');
+                        toggleState(stateId);
+                    });
+
+                updateVoteCounts();
+            });
+        </script>
+    <footer>
+        <p>&copy; 2024 Scott Ratchford - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
