@@ -1,50 +1,48 @@
 ---
 layout: project
 title: "3D Printing & CAD"
-description: "Functional parts, prototypes, and engineering projects using CAD modeling and FDM 3D printing"
+description: "Functional parts, prototypes, and engineering projects using CAD modeling and 3D printing"
 categories: [3D Printing, CAD]
 cover_image: /assets/images/laptop_typing.jpg
-date: 2024-02-01
+date: 2026-02-15
 featured: true
 ---
 
 ## Overview
 
-With {{ 'now' | date: "%Y" | minus: 2016 }}+ years of 3D printing experience, I design and manufacture functional parts, prototypes, and custom solutions using CAD modeling and FDM printing technology.
+With {{ 'now' | date: "%Y" | minus: 2016 }}+ years of 3D printing experience, I design and manufacture functional parts, prototypes, and custom solutions using CAD modeling and 3D printing technology.
 
 ## Skills & Expertise
 
 - **CAD Modeling**: SolidWorks for precision engineering design
-- **3D Printing**: FDM printing, printer maintenance, and optimization
+- **3D Printing**: Maintenance, repair, and operation of FDM printers, SLA printers, binder jetting printers, and chemical baths
 - **G-code/Cura Scripting**: Custom print profiles and automation
-- **Materials**: PLA, PETG, ABS, and specialty filaments
+- **Materials**: PLA, PETG, ABS, resin, Kevlar, nylon, carbon fiber, powder, and chemical supports
 
 ## Project Highlights
 
 ### Functional Parts
 
 - Custom parts for manufacturing applications
-- Prototypes and engineering solutions
 - Precision-designed components using SolidWorks
 
-### Engineering Support
+### Professional Experience
 
-- Former technical support specialist for UA College of Engineering
+#### Technical Support for University of Alabama College of Engineering (2021-2023)
+
 - Assisted students and faculty with 3D printing projects
-- Maintained and troubleshot multiple 3D printer types
+- Maintained FDM, SLA, and binder jetting printers
+- Designed custom solutions
+- 3D scanning with industrial-grade equipment
+- Quoted custom orders
+- Assisted academic design work
 
-### Technical Work
+#### 3D Design Intern at NGE Equipment (202)
 
-- Printer maintenance, repair, and calibration
-- Custom slicer profiles and G-code optimization
-- Material testing and application selection
-
-## Technical Experience
-
-- **Software**: SolidWorks, Cura, PrusaSlicer
-- **Hardware**: Various FDM printers, maintenance and repair
-- **Materials**: PLA, PETG, ABS, and specialty filaments
-- **Applications**: Functional prototypes, custom parts, engineering solutions
+- Repaired and rebuilt FDM and SLA printers
+- Design 3D models
+- Scripted Cura plugins
+- Directed programmed with G-Code
 
 ## Gallery
 
