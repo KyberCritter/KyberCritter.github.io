@@ -14,6 +14,7 @@ linkedin_username: scott-ratchford
 profile_image: /assets/images/scott_shibuya_square.jpg
 
 # Build settings
+theme: null  # Using custom layouts
 markdown: kramdown
 kramdown:
   input: GFM

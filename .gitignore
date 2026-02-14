@@ -10,7 +10,6 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-Gemfile.lock
 .bundle
 /UPDATING.md
 /.claude
