@@ -6,7 +6,7 @@ categories: [Software, Data Analysis]
 cover_image: /images/projects/colley-cover.jpg
 links:
   live: /colley-rankings/colley-rankings-latest.html
-date: 2023-09-01
+date: 2026-02-13
 featured: false
 ---
 
@@ -17,6 +17,7 @@ Implementation of the Colley Matrix ranking system for college football teams. T
 ## About the Colley Method
 
 The Colley Matrix method is a mathematical ranking system that:
+
 - Uses linear algebra to compute team rankings
 - Accounts for strength of schedule
 - Provides unbiased, objective rankings
