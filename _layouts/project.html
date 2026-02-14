@@ -4,8 +4,8 @@ layout: default
 
 <article class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     {% if page.cover_image %}
-    <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
-        <img src="{{ page.cover_image }}" alt="{{ page.title }}" class="w-full h-auto">
+    <div class="mb-8 rounded-xl overflow-hidden shadow-lg max-h-64 md:max-h-80">
+        <img src="{{ page.cover_image }}" alt="{{ page.title }}" class="w-full h-full object-cover">
     </div>
     {% endif %}
 
