@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<article class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    {% if page.cover_image %}
+    <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+        <img src="{{ page.cover_image }}" alt="{{ page.title }}" class="w-full h-auto">
+    </div>
+    {% endif %}
+
+    <header class="mb-8">
+        <div class="flex flex-wrap gap-2 mb-4">
+            {% for category in page.categories %}
+            <span class="px-3 py-1 bg-accent/10 text-accent rounded-full text-sm font-semibold">{{ category }}</span>
+            {% endfor %}
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="text-xl text-gray-600">{{ page.description }}</p>
+        {% endif %}
+
+        {% if page.links %}
+        <div class="flex flex-wrap gap-4 mt-6">
+            {% if page.links.github %}
+            <a href="{{ page.links.github }}" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+            {% endif %}
+            {% if page.links.live %}
+            <a href="{{ page.links.live }}" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg hover:bg-primary transition">
+                <i class="fas fa-external-link-alt"></i> {% if page.title contains "Pygskin" %}Pygskin Website{% else %}Live Demo{% endif %}
+            </a>
+            {% endif %}
+            {% if page.links.pdf %}
+            <a href="{{ page.links.pdf }}" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-accent transition">
+                <i class="fas fa-file-pdf"></i> View PDF
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="prose prose-lg max-w-none">
+        {{ content }}
+    </div>
+
+    {% if page.pdf_embed %}
+    <div class="mt-12">
+        <h2 class="text-2xl font-bold mb-4">Document Preview</h2>
+        <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+            <iframe src="{{ page.pdf_embed }}" class="w-full h-[600px]"></iframe>
+        </div>
+    </div>
+    {% endif %}
+
+    <footer class="mt-12 pt-8 border-t border-gray-200">
+        <a href="/projects" class="text-accent hover:text-primary font-medium transition">
+            ← Back to Projects
+        </a>
+    </footer>
+</article>

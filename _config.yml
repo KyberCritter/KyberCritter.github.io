@@ -1,0 +1,86 @@
+# Site settings
+title: Scott Ratchford
+email: contact@scottratchford.com
+description: >-
+  Software developer, maker, and builder. Proficient in Python, web development,
+  AI/ML, and 3D printing. Building innovative solutions at the intersection
+  of software and manufacturing.
+baseurl: ""
+url: "https://scottratchford.com"
+github_username: KyberCritter
+linkedin_username: scott-ratchford
+
+# Profile image
+profile_image: /assets/images/scott_shibuya_square.jpg
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - .vscode
+  - scripts
+  - node_modules
+  - vendor
+
+# Include
+include:
+  - _pages
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site metadata
+author:
+  name: Scott A. Ratchford
+  location: Dothan, AL, USA
+  education:
+    - degree: MBA
+      institution: The University of Alabama
+      year: 2025
+    - degree: B.S. Computer Science
+      institution: The University of Alabama
+      year: 2024
+      honors: Honors College, Cum Laude
+
+# Analytics
+umami:
+  script: "https://data.pygskin.com/script.js"
+  website_id: "932d953a-77fc-4bd2-9071-1f18004f736f"
+  domains: "scottratchford.com"

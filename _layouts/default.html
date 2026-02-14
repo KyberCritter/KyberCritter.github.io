@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Navy blue
+                        secondary: '#475569', // Slate
+                        accent: '#3b82f6', // Bright blue
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            },
+            plugins: [
+                function({ addComponents }) {
+                    addComponents({
+                        '.prose': {
+                            maxWidth: 'none',
+                            color: '#374151',
+                        },
+                        '.prose h2': {
+                            fontSize: '1.875rem',
+                            fontWeight: '700',
+                            color: '#1e3a8a',
+                            marginTop: '2rem',
+                            marginBottom: '1rem',
+                        },
+                        '.prose h3': {
+                            fontSize: '1.5rem',
+                            fontWeight: '600',
+                            color: '#1e3a8a',
+                            marginTop: '1.5rem',
+                            marginBottom: '0.75rem',
+                        },
+                        '.prose p': {
+                            marginBottom: '1rem',
+                            lineHeight: '1.75',
+                        },
+                        '.prose ul': {
+                            marginTop: '0.5rem',
+                            marginBottom: '1rem',
+                            paddingLeft: '1.5rem',
+                            listStyleType: 'disc',
+                        },
+                        '.prose li': {
+                            marginBottom: '0.5rem',
+                        },
+                        '.prose strong': {
+                            fontWeight: '600',
+                            color: '#1f2937',
+                        },
+                        '.prose a': {
+                            color: '#3b82f6',
+                            textDecoration: 'none',
+                        },
+                        '.prose a:hover': {
+                            color: '#1e3a8a',
+                            textDecoration: 'underline',
+                        },
+                    })
+                }
+            ]
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Analytics -->
+    {% if site.umami %}
+    <script defer src="{{ site.umami.script }}" data-website-id="{{ site.umami.website_id }}" data-domains="{{ site.umami.domains }}"></script>
+    {% endif %}
+
+    <!-- SEO -->
+    {% seo %}
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    {% include nav.html %}
+
+    <main class="min-h-screen">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+</body>
+</html>
