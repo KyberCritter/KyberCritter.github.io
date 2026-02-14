@@ -1,7 +1,7 @@
 ---
 layout: project
-title: "Custom LEGO Builds"
-description: "Original LEGO designs with renders and instructions"
+title: "Custom Lego Builds"
+description: "Original Lego designs with renders and instructions"
 categories: [Lego]
 cover_image: /assets/images/lego_pile.jpg
 date: 2026-02-13
@@ -10,13 +10,13 @@ featured: false
 
 ## Overview
 
-I design and build custom LEGO models. I include high-quality 3D renders and instructions.
+I design and build custom Lego models. I include high-quality 3D renders and instructions.
 
 ## Project Highlights
 
 ### Custom Builds
 
-- Designed and built original LEGO models
+- Designed and built original Lego models
 - Created professional instruction PDFs for each build
 - Documented part lists and building techniques
 
@@ -34,7 +34,7 @@ I design and build custom LEGO models. I include high-quality 3D renders and ins
 
 ## Gallery
 
-*Coming soon: Gallery of completed LEGO builds with instruction PDFs*
+*Coming soon: Gallery of completed Lego builds with instruction PDFs*
 
 ---
 
@@ -42,7 +42,7 @@ I design and build custom LEGO models. I include high-quality 3D renders and ins
     <div class="mb-4">
         <i class="fab fa-instagram text-6xl"></i>
     </div>
-    <h3 class="text-3xl font-bold mb-3">Follow My LEGO Journey</h3>
+    <h3 class="text-3xl font-bold mb-3">Follow My Lego Journey</h3>
     <p class="text-xl mb-6 text-gray-100">
         See my latest builds, works in progress, and instruction releases
     </p>
