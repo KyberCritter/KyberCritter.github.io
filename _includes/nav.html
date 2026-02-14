@@ -1,0 +1,77 @@
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="/" class="text-xl md:text-2xl font-bold text-primary hover:text-accent transition">
+                    Scott Ratchford
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="/" class="text-gray-700 hover:text-accent transition font-medium">Home</a></li>
+                <li><a href="/resume" class="text-gray-700 hover:text-accent transition font-medium">Resume</a></li>
+                <li><a href="/projects" class="text-gray-700 hover:text-accent transition font-medium">Projects</a></li>
+                <li><a href="/blog" class="text-gray-700 hover:text-accent transition font-medium">Blog</a></li>
+                <li><a href="/about" class="text-gray-700 hover:text-accent transition font-medium">About</a></li>
+                <li><a href="/contact.html" class="text-gray-700 hover:text-accent transition font-medium">Contact</a></li>
+            </ul>
+
+            <!-- Social Links -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener"
+                   class="text-gray-600 hover:text-accent transition" aria-label="GitHub">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
+                   class="text-gray-600 hover:text-accent transition" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-accent focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <ul class="space-y-2">
+                <li><a href="/" class="block py-2 text-gray-700 hover:text-accent transition font-medium">Home</a></li>
+                <li><a href="/resume" class="block py-2 text-gray-700 hover:text-accent transition font-medium">Resume</a></li>
+                <li><a href="/projects" class="block py-2 text-gray-700 hover:text-accent transition font-medium">Projects</a></li>
+                <li><a href="/blog" class="block py-2 text-gray-700 hover:text-accent transition font-medium">Blog</a></li>
+                <li><a href="/about" class="block py-2 text-gray-700 hover:text-accent transition font-medium">About</a></li>
+                <li><a href="/contact.html" class="block py-2 text-gray-700 hover:text-accent transition font-medium">Contact</a></li>
+            </ul>
+            <div class="flex space-x-4 mt-4">
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener"
+                   class="text-gray-600 hover:text-accent transition">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
+                   class="text-gray-600 hover:text-accent transition">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+</script>

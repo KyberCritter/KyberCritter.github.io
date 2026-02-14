@@ -1,0 +1,29 @@
+<div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 project-card" data-categories="{{ include.categories | join: ' ' }}">
+    {% if include.cover_image %}
+    <div class="aspect-video w-full overflow-hidden bg-gray-100">
+        <img src="{{ include.cover_image }}" alt="{{ include.title }}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+    </div>
+    {% endif %}
+
+    <div class="p-6">
+        <div class="flex flex-wrap gap-2 mb-3">
+            {% for category in include.categories %}
+            <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-semibold uppercase tracking-wide">
+                {{ category }}
+            </span>
+            {% endfor %}
+        </div>
+
+        <h3 class="text-xl font-bold text-primary mb-2">
+            <a href="{{ include.url }}" class="hover:text-accent transition">
+                {{ include.title }}
+            </a>
+        </h3>
+
+        <p class="text-gray-600 mb-4 line-clamp-3">{{ include.description }}</p>
+
+        <a href="{{ include.url }}" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+            View Project <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+<footer class="bg-primary text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- About Column -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">{{ site.title }}</h3>
+                <p class="text-gray-300">{{ site.description }}</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="/" class="text-gray-300 hover:text-white transition">Home</a></li>
+                    <li><a href="/resume" class="text-gray-300 hover:text-white transition">Resume</a></li>
+                    <li><a href="/projects" class="text-gray-300 hover:text-white transition">Projects</a></li>
+                    <li><a href="/blog" class="text-gray-300 hover:text-white transition">Blog</a></li>
+                    <li><a href="/about" class="text-gray-300 hover:text-white transition">About</a></li>
+                    <li><a href="/contact.html" class="text-gray-300 hover:text-white transition">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Social -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Connect</h3>
+                <ul class="space-y-2 mb-4">
+                    <li>
+                        <a href="mailto:{{ site.email }}" class="text-gray-300 hover:text-white transition">
+                            {{ site.email }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/downloads/publickey.asc" class="text-gray-300 hover:text-white transition">
+                            <i class="fas fa-key"></i> PGP Public Key
+                        </a>
+                    </li>
+                </ul>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener"
+                       class="text-gray-300 hover:text-white transition" aria-label="GitHub">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
+                       class="text-gray-300 hover:text-white transition" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+            <p>&copy; {{ 'now' | date: "%Y" }} Scott Ratchford. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="/license" class="hover:text-white transition">License</a> ·
+                <a href="/sitemap.xml" class="hover:text-white transition">Sitemap</a>
+            </p>
+        </div>
+    </div>
+</footer>

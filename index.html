@@ -1,116 +1,253 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Resume of Scott Ratchford, experienced in computer science and mathematics.">
-    <meta name="keywords" content="Scott Ratchford, Resume, software developer, computer science, mathematics">
-    <title>Scott Ratchford | Software Developer</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script defer src="https://data.pygskin.com/script.js" data-website-id="932d953a-77fc-4bd2-9071-1f18004f736f" data-domains="scottratchford.com"></script>
-</head>
-<body>
+---
+layout: default
+title: Home
+description: Scott Ratchford - Software developer, maker, and builder. Expert in Python, AI/ML, and full-stack development.
+---
 
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Scott Ratchford</a>
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-primary via-accent to-primary text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+        <div class="text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                Hi, I'm <span class="text-yellow-300">Scott Ratchford</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
+                Software developer, maker, and builder
+            </p>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Building innovative solutions with Python, AI/ML, and full-stack development.
+                Passionate about college football analytics, 3D printing, and creating tools that make a real impact.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/projects" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                    View My Work
+                </a>
+                <a href="/resume" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all transform hover:scale-105">
+                    View Resume
+                </a>
+                <a href="/contact.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all transform hover:scale-105">
+                    Get in Touch
+                </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
 
-    <section id="hero">
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="/images/scott_square.jpg" alt="Scott Ratchford Headshot">
-            </div>
-            
-            <div class="hero-description">
-                <h1>Hi, I'm Scott Ratchford</h1>
-                <p>I'm a passionate software developer and MBA student with expertise in full-stack development, machine learning, and 3D printing. I love solving complex problems and creating innovative solutions. Let's build something together!</p>
-                <a href="#projects" class="btn">View My Work</a>
+            <!-- Social Links -->
+            <div class="mt-12 flex justify-center gap-6">
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener"
+                   class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" aria-label="GitHub">
+                    <i class="fab fa-github text-4xl"></i>
+                </a>
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
+                   class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin text-4xl"></i>
+                </a>
+                <a href="mailto:{{ site.email }}"
+                   class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" aria-label="Email">
+                    <i class="fas fa-envelope text-4xl"></i>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="#F9FAFB"/>
+        </svg>
+    </div>
+</section>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I recently received my Bachelor of Computer Science from the University of Alabama. I'm now a graduate student studying for my Masters in Business Administration through the STEM Path to the MBA. I've been working as a software developer for SmartLam North America since May 2023.</p>
-            <p>I love to combine my professional skills with my hobbies to create projects I'm truly passionate about! For example, I spend a lot of time analyzing college football teams, coaches, and players in between watching them play.</p>
-            <div class="skills">
-                <h3>Skills</h3>
-                <ul id="skills-list">
-                    <!-- Skills will be loaded dynamically here -->
-                </ul>
+<!-- Highlights Section -->
+<section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Featured Work</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Featured Software Project -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+                <div class="bg-gradient-to-br from-accent to-primary p-6 text-white">
+                    <i class="fas fa-code text-4xl mb-3"></i>
+                    <h3 class="text-xl font-bold">Featured Software</h3>
+                </div>
+                <div class="p-6">
+                    {% assign featured_software = nil %}
+                    {% for project in site.projects %}
+                        {% if project.featured and project.categories contains 'Software' %}
+                            {% assign featured_software = project %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if featured_software %}
+                        <h4 class="text-xl font-bold text-primary mb-2">{{ featured_software.title }}</h4>
+                        <p class="text-gray-600 mb-4">{{ featured_software.description }}</p>
+                        <a href="{{ featured_software.url }}" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    {% else %}
+                        <h4 class="text-xl font-bold text-primary mb-2">Pygskin Analytics</h4>
+                        <p class="text-gray-600 mb-4">ML-powered college football play prediction platform</p>
+                        <a href="/projects" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+                            View Projects <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Featured 3D/Lego Project -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 p-6 text-white">
+                    <i class="fas fa-cube text-4xl mb-3"></i>
+                    <h3 class="text-xl font-bold">Maker Projects</h3>
+                </div>
+                <div class="p-6">
+                    {% assign featured_maker = nil %}
+                    {% for project in site.projects %}
+                        {% if project.featured %}
+                            {% if project.categories contains '3D Printing' or project.categories contains 'Lego' %}
+                                {% assign featured_maker = project %}
+                                {% break %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if featured_maker %}
+                        <h4 class="text-xl font-bold text-primary mb-2">{{ featured_maker.title }}</h4>
+                        <p class="text-gray-600 mb-4">{{ featured_maker.description }}</p>
+                        <a href="{{ featured_maker.url }}" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    {% else %}
+                        <h4 class="text-xl font-bold text-primary mb-2">3D Printing & LEGO</h4>
+                        <p class="text-gray-600 mb-4">Custom builds combining CAD modeling and creative design</p>
+                        <a href="/projects" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+                            View Projects <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Latest Blog Post -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow">
+                <div class="bg-gradient-to-br from-green-500 to-teal-500 p-6 text-white">
+                    <i class="fas fa-pen-fancy text-4xl mb-3"></i>
+                    <h3 class="text-xl font-bold">Latest Post</h3>
+                </div>
+                <div class="p-6">
+                    {% if site.posts.size > 0 %}
+                        {% assign latest_post = site.posts | first %}
+                        <h4 class="text-xl font-bold text-primary mb-2">{{ latest_post.title }}</h4>
+                        <p class="text-sm text-gray-500 mb-2">{{ latest_post.date | date: "%B %d, %Y" }}</p>
+                        <p class="text-gray-600 mb-4">{{ latest_post.description | default: latest_post.excerpt | strip_html | truncatewords: 15 }}</p>
+                        <a href="{{ latest_post.url }}" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+                            Read More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    {% else %}
+                        <h4 class="text-xl font-bold text-primary mb-2">Blog Coming Soon</h4>
+                        <p class="text-gray-600 mb-4">Thoughts on software development, AI/ML, and more</p>
+                        <a href="/blog" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
+                            View Blog <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    {% endif %}
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div id="project-list">
-                <!-- Projects will be dynamically loaded here -->
+<!-- Quick About Section -->
+<section class="bg-white py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">About Me</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    I'm a software developer with expertise in Python, AI/ML, and full-stack development.
+                    Currently pursuing my MBA at the University of Alabama while building production
+                    systems at SmartLam North America.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    I love combining my professional skills with my hobbies – from building ML-powered
+                    football analytics platforms to designing custom 3D printed parts and LEGO builds.
+                </p>
+                <a href="/about" class="inline-flex items-center bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary transition">
+                    Learn More About Me <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            <div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-gradient-to-br from-primary to-accent text-white p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">9+</div>
+                        <div class="text-sm">Years 3D Printing</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-accent to-primary text-white p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">$20K+</div>
+                        <div class="text-sm">Monthly Savings</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">2024</div>
+                        <div class="text-sm">B.S. in CS</div>
+                    </div>
+                    <div class="bg-gradient-to-br from-green-500 to-teal-500 text-white p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold mb-2">2025</div>
+                        <div class="text-sm">MBA</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="github">
-        <div class="container">
-            <h2>My GitHub Repositories</h2>
-            <ul id="github-repos-list">
-                <!-- Repositories will be dynamically loaded here -->
-            </ul>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/scott-ratchford/" data-umami-event="sr-linkedin-link" target="_blank" class="contact-link">LinkedIn</a>
+<!-- Skills Section -->
+<section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Technical Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition">
+                <i class="fab fa-python text-5xl text-accent mb-3"></i>
+                <div class="font-semibold">Python</div>
             </div>
-            <div class="contact-links">
-                <a href="mailto:contact@scottratchford.com" class="contact-link">Email: contact@scottratchford.com</a>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition">
+                <i class="fas fa-brain text-5xl text-accent mb-3"></i>
+                <div class="font-semibold">AI/ML</div>
             </div>
-            <p>For more ways to contact me, including secure communication, visit the <a style="text-decoration: underline" src="/contact.html">Contact Page</a>.</p>
-            <div class="business-card-container">
-                <a href="/downloads/Scott Ratchford's Business Card.png" data-umami-event="sr-card-download" download><img id="business-card" src="/downloads/scott_ratchford_business_card.png" alt="Business Card"></a>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition">
+                <i class="fas fa-globe text-5xl text-accent mb-3"></i>
+                <div class="font-semibold">Django/Flask</div>
             </div>
-            <div class="contact-links">
-                <h2>Resume PDF (<a style="text-decoration: underline;" href="/downloads/Scott_Ratchford_Resume.pdf" data-umami-event="sr-resume-download" download>Download</a>)</h2>
-                <iframe src="/downloads/Scott_Ratchford_Resume.pdf" width="80%" height="600px"></iframe>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition">
+                <i class="fas fa-database text-5xl text-accent mb-3"></i>
+                <div class="font-semibold">PostgreSQL</div>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Scott Ratchford. All rights reserved.</p>
-            <div class="social-links">
-                <a data-umami-event="sr-github-link" href="#"><i class="fab fa-github"></i></a>
-                <a data-umami-event="sr-linkedin-link" href="#"><i class="fab fa-linkedin"></i></a>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition">
+                <i class="fab fa-docker text-5xl text-accent mb-3"></i>
+                <div class="font-semibold">Docker</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition">
+                <i class="fas fa-cube text-5xl text-accent mb-3"></i>
+                <div class="font-semibold">3D Printing</div>
             </div>
         </div>
-    </footer>
+        <div class="text-center mt-8">
+            <a href="/resume" class="inline-flex items-center text-accent hover:text-primary font-medium text-lg transition">
+                View Full Resume <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </div>
+</section>
 
-    <!-- JavaScript for Loading Data -->
-    <script src="/js/navmenu.js"></script>
-    <script src="/js/skills.js"></script>
-    <script src="/js/projects.js"></script>
-    <script src="/js/github.js"></script>
-</body>
-</html>
+<!-- CTA Section -->
+<section class="bg-gradient-to-br from-primary to-accent text-white py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Let's Build Something Together</h2>
+        <p class="text-xl text-gray-100 mb-8">
+            I'm always open to discussing new projects, opportunities, or collaborations
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="/contact.html" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+                Get in Touch
+            </a>
+            <a href="/projects" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-all transform hover:scale-105">
+                View All Projects
+            </a>
+        </div>
+    </div>
+</section>
