@@ -31,7 +31,7 @@ layout: default
             {% if page.links.live %}
             <a href="{{ page.links.live }}" target="_blank" rel="noopener"
                class="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg hover:bg-primary transition">
-                <i class="fas fa-external-link-alt"></i> Live Demo
+                <i class="fas fa-external-link-alt"></i> {% if page.title contains "Pygskin" %}Pygskin Website{% else %}Live Demo{% endif %}
             </a>
             {% endif %}
             {% if page.links.pdf %}
