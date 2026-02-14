@@ -9,73 +9,8 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1e3a8a', // Navy blue
-                        secondary: '#475569', // Slate
-                        accent: '#3b82f6', // Bright blue
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    }
-                }
-            },
-            plugins: [
-                function({ addComponents }) {
-                    addComponents({
-                        '.prose': {
-                            maxWidth: 'none',
-                            color: '#374151',
-                        },
-                        '.prose h2': {
-                            fontSize: '1.875rem',
-                            fontWeight: '700',
-                            color: '#1e3a8a',
-                            marginTop: '2rem',
-                            marginBottom: '1rem',
-                        },
-                        '.prose h3': {
-                            fontSize: '1.5rem',
-                            fontWeight: '600',
-                            color: '#1e3a8a',
-                            marginTop: '1.5rem',
-                            marginBottom: '0.75rem',
-                        },
-                        '.prose p': {
-                            marginBottom: '1rem',
-                            lineHeight: '1.75',
-                        },
-                        '.prose ul': {
-                            marginTop: '0.5rem',
-                            marginBottom: '1rem',
-                            paddingLeft: '1.5rem',
-                            listStyleType: 'disc',
-                        },
-                        '.prose li': {
-                            marginBottom: '0.5rem',
-                        },
-                        '.prose strong': {
-                            fontWeight: '600',
-                            color: '#1f2937',
-                        },
-                        '.prose a': {
-                            color: '#3b82f6',
-                            textDecoration: 'none',
-                        },
-                        '.prose a:hover': {
-                            color: '#1e3a8a',
-                            textDecoration: 'underline',
-                        },
-                    })
-                }
-            ]
-        }
-    </script>
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">

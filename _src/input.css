@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom prose styles (replaces CDN plugin config) */
+.prose {
+  max-width: none;
+  color: #374151;
+}
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.75;
+}
+.prose ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+.prose li {
+  margin-bottom: 0.5rem;
+}
+.prose strong {
+  font-weight: 600;
+  color: #1f2937;
+}
+.prose a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+.prose a:hover {
+  color: #1e3a8a;
+  text-decoration: underline;
+}

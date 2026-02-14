@@ -13,3 +13,6 @@ vendor
 .bundle
 /UPDATING.md
 /.claude
+
+# Tailwind CLI (standalone binary)
+tailwindcss.exe
