@@ -2,13 +2,16 @@
 title: Scott Ratchford
 email: contact@scottratchford.com
 description: >-
-  Software developer, maker, and builder. Expert in Python, web development,
+  Software developer, maker, and builder. Proficient in Python, web development,
   AI/ML, and 3D printing. Building innovative solutions at the intersection
   of software and manufacturing.
 baseurl: ""
 url: "https://scottratchford.com"
 github_username: KyberCritter
 linkedin_username: scott-ratchford
+
+# Profile image
+profile_image: /assets/images/scott_shibuya_square.jpg
 
 # Build settings
 markdown: kramdown

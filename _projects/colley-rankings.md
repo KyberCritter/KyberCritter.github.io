@@ -3,7 +3,7 @@ layout: project
 title: "Colley Rankings System"
 description: "Mathematical ranking system for college football teams based on the Colley Matrix method"
 categories: [Software, Data Analysis]
-cover_image: /images/projects/colley-cover.jpg
+cover_image: /assets/images/football_stadium.jpg
 links:
   live: /colley-rankings/colley-rankings-latest.html
 date: 2026-02-13

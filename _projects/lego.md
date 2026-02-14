@@ -3,7 +3,7 @@ layout: project
 title: "Custom LEGO Builds"
 description: "Original LEGO designs with renders and instructions"
 categories: [Lego]
-cover_image: /images/projects/lego-cover.jpg
+cover_image: /assets/images/lego_pile.jpg
 date: 2026-02-13
 featured: false
 ---

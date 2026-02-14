@@ -3,7 +3,7 @@ layout: project
 title: "3D Printing & CAD"
 description: "Functional parts, prototypes, and engineering projects using CAD modeling and FDM 3D printing"
 categories: [3D Printing, CAD]
-cover_image: /images/projects/3d-printing-cover.jpg
+cover_image: /assets/images/laptop_typing.jpg
 date: 2024-02-01
 featured: true
 ---

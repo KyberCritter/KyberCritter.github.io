@@ -3,7 +3,7 @@ layout: project
 title: "Pygskin - Football Analytics Platform"
 description: "Django web application using ML to predict college football play calls, deployed on DigitalOcean with Nginx/Gunicorn"
 categories: [Software, AI/ML, Web]
-cover_image: /images/projects/pygskin-cover.jpg
+cover_image: /assets/images/macbook_table.jpg
 links:
   github: https://github.com/KyberCritter/pygskin
   live: https://pygskin.com
