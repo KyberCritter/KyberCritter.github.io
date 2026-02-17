@@ -18,6 +18,9 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
+        <div class="mt-6">
+            {% include share-buttons.html %}
+        </div>
     </header>
 
     <div class="prose prose-lg max-w-none">
@@ -29,24 +32,7 @@ layout: default
             <a href="/blog" class="text-accent hover:text-primary font-medium transition">
                 ← Back to Blog
             </a>
-            <div class="flex gap-4">
-                <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}"
-                   class="text-gray-500 hover:text-accent transition" target="_blank" rel="noopener" title="Share on X">
-                    <i class="fab fa-x-twitter"></i>
-                </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-                   class="text-gray-500 hover:text-accent transition" target="_blank" rel="noopener" title="Share on LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-                   class="text-gray-500 hover:text-accent transition" target="_blank" rel="noopener" title="Share on Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}"
-                   class="text-gray-500 hover:text-accent transition" target="_blank" rel="noopener" title="Share on Reddit">
-                    <i class="fab fa-reddit"></i>
-                </a>
-            </div>
+            {% include share-buttons.html %}
         </div>
     </footer>
 </article>

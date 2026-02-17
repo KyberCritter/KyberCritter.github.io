@@ -1,0 +1,21 @@
+<div class="flex items-center gap-3">
+    <span class="text-sm text-gray-500 font-medium">Share</span>
+    <div class="flex gap-3">
+        <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}"
+           class="text-gray-400 hover:text-accent transition" target="_blank" rel="noopener" title="Share on X">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+           class="text-gray-400 hover:text-accent transition" target="_blank" rel="noopener" title="Share on LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+           class="text-gray-400 hover:text-accent transition" target="_blank" rel="noopener" title="Share on Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}"
+           class="text-gray-400 hover:text-accent transition" target="_blank" rel="noopener" title="Share on Reddit">
+            <i class="fab fa-reddit"></i>
+        </a>
+    </div>
+</div>
