@@ -1,4 +1,4 @@
-<footer class="bg-primary text-white mt-16">
+<footer class="bg-primary text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- About Column -->
@@ -49,6 +49,28 @@
                         <i class="fas fa-envelope text-2xl"></i>
                     </a>
                 </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 flex items-center justify-center gap-4">
+            <span class="text-sm text-gray-300 font-medium">Share this page</span>
+            <div class="flex gap-4">
+                <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}"
+                   class="text-gray-300 hover:text-white transition" target="_blank" rel="noopener" title="Share on X">
+                    <i class="fab fa-x-twitter text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
+                   class="text-gray-300 hover:text-white transition" target="_blank" rel="noopener" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin text-lg"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
+                   class="text-gray-300 hover:text-white transition" target="_blank" rel="noopener" title="Share on Facebook">
+                    <i class="fab fa-facebook text-lg"></i>
+                </a>
+                <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}"
+                   class="text-gray-300 hover:text-white transition" target="_blank" rel="noopener" title="Share on Reddit">
+                    <i class="fab fa-reddit text-lg"></i>
+                </a>
             </div>
         </div>
 
