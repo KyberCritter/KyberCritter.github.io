@@ -12,10 +12,6 @@ _site
 vendor
 .bundle
 /UPDATING.md
-/.claude/*
-!/.claude/CLAUDE.md
-!/.claude/settings.json
-!/.claude/skills/
 
 # Tailwind CLI (standalone binary)
 tailwindcss.exe
