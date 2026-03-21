@@ -12,7 +12,8 @@ _site
 vendor
 .bundle
 /UPDATING.md
-/.claude
+/.claude/*
+!/.claude/CLAUDE.md
 
 # Tailwind CLI (standalone binary)
 tailwindcss.exe
