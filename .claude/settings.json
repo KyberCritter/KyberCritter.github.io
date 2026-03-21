@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "command": "bash scripts/setup.sh",
+        "description": "Install Ruby, Node.js, and project dependencies for local Jekyll serving and screenshots"
+      }
+    ]
+  }
+}
