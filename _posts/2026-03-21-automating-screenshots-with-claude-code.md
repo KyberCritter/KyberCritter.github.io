@@ -28,10 +28,6 @@ The skill documents the full process:
 
 I also wrote a setup script that runs automatically when Claude Code starts a cloud session. It installs Ruby dependencies, Playwright, and Chromium so everything is ready to go without any manual configuration. This was important to me because I wanted the skill to work immediately in any new session, not just on my local machine.
 
-## Why Playwright?
-
-Claude initially tried [Puppeteer](https://pptr.dev/), but the cloud environment had compatibility issues. [Playwright](https://playwright.dev/) handled Chromium installation more cleanly with `npx playwright install chromium`, and it bundled everything it needed. It also dealt with the sandboxing constraints of containerized environments without much fuss.
-
 ## What's Next
 
 Now I can ask Claude to take a screenshot of any page on the site at any viewport size. This is especially useful when I'm working from my phone and can't preview changes locally. It's a small tool, but it gives me confidence that layout changes look right before they hit production.
