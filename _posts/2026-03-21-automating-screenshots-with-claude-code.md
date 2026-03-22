@@ -12,7 +12,7 @@ I've been using [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to
 
 I often make changes to this site from my phone using Claude Code. The tradeoff is that I don't have a staging or development environment on mobile, so I can't preview layout changes before they go live. Before merging a CSS fix for the stat boxes on my homepage — they were crammed into three tiny columns on mobile instead of stacking vertically — I wanted a visual confirmation that the fix actually worked.
 
-I asked Claude to host the site locally and take a scrolling screenshot in a mobile viewport. It worked, but the process involved a lot of trial and error with dependencies and browser automation tools.
+I asked Claude to host the site locally and take a scrolling screenshot in a mobile viewport. It took some work on Claude's end — sorting out Ruby compatibility issues and figuring out which browser automation tool played nicely with the cloud environment — but it got there.
 
 ## The Solution
 
