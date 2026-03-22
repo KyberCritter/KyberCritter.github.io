@@ -10,9 +10,9 @@ I've been using [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to
 
 ## The Problem
 
-When I'm making layout changes, especially for mobile, I want to see what the full page looks like before I push anything live. Normally, I'd spin up the Jekyll server, open a browser, resize the window, and scroll through the page myself. It's not hard, but it's tedious, and it's the kind of thing I forget to do before merging a change.
+I often make changes to this site from my phone using Claude Code. The tradeoff is that I don't have a staging or development environment on mobile, so I can't preview layout changes before they go live. Before merging a CSS fix for the stat boxes on my homepage — they were crammed into three tiny columns on mobile instead of stacking vertically — I wanted a visual confirmation that the fix actually worked.
 
-I was working on a CSS fix for the stat boxes on my homepage. They were crammed into three tiny columns on mobile instead of stacking vertically. After making the fix, I wanted a quick visual confirmation. I asked Claude to host the site locally and take a scrolling screenshot in a mobile viewport. It worked, but the process involved a lot of trial and error with dependencies and browser automation tools.
+I asked Claude to host the site locally and take a scrolling screenshot in a mobile viewport. It worked, but the process involved a lot of trial and error with dependencies and browser automation tools.
 
 ## The Solution
 
@@ -30,10 +30,10 @@ I also wrote a setup script that runs automatically when Claude Code starts a cl
 
 ## Why Playwright?
 
-My first instinct was to use [Puppeteer](https://pptr.dev/), but the cloud environment I was working in had compatibility issues. Playwright handled Chromium installation more cleanly with `npx playwright install chromium`, and it bundled everything it needed. It also dealt with the sandboxing constraints of containerized environments without much fuss.
+Claude initially tried [Puppeteer](https://pptr.dev/), but the cloud environment had compatibility issues. [Playwright](https://playwright.dev/) handled Chromium installation more cleanly with `npx playwright install chromium`, and it bundled everything it needed. It also dealt with the sandboxing constraints of containerized environments without much fuss.
 
 ## What's Next
 
-Now I can ask Claude to take a screenshot of any page on the site at any viewport size. I'm planning to use this for visual regression checks before merging layout changes. It's a small tool, but it removes just enough friction to make me actually verify my changes every time.
+Now I can ask Claude to take a screenshot of any page on the site at any viewport size. This is especially useful when I'm working from my phone and can't preview changes locally. It's a small tool, but it gives me confidence that layout changes look right before they hit production.
 
 If you're using Claude Code on your own projects, I'd recommend exploring skills. They're just markdown files, but they give Claude the context it needs to perform project-specific tasks reliably. You can find mine in the [`.claude/skills/`](https://github.com/KyberCritter/KyberCritter.github.io/tree/main/.claude/skills) directory of this site's repository.
