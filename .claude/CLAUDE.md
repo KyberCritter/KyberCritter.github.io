@@ -13,4 +13,4 @@ Use the current date when updating Jekyll page files.
 
 ## git
 
-Do not edit the git history. You may view it, but you may not add, commit, push, etc.
+Do not edit the git history. You may view it, but you may only add, commit, or push to Claude-made branches.
