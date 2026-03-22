@@ -10,7 +10,7 @@ I've been using [Claude Code](https://docs.anthropic.com/en/docs/claude-code) to
 
 ## The Problem
 
-I often make changes to this site from my phone using Claude Code. The tradeoff is that I don't have a staging or development environment on mobile, so I can't preview layout changes before they go live. Before merging a CSS fix for the stat boxes on my homepage — they were crammed into three tiny columns on mobile instead of stacking vertically — I wanted a visual confirmation that the fix actually worked.
+I often make changes to this site from my phone using Claude Code. The tradeoff is that I don't have a staging or development environment on mobile, so I can't preview layout changes before they go live. The stat boxes on my homepage were crammed into three tiny columns on mobile instead of stacking vertically. Before merging the fix, I wanted a visual confirmation that it actually worked.
 
 I asked Claude to host the site locally and take a scrolling screenshot in a mobile viewport, and it delivered exactly what I needed.
 
