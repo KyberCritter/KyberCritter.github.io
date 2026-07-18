@@ -81,7 +81,7 @@ author:
       honors: Honors College, Cum Laude
 
 # Analytics
-umami:
-  script: "https://data.pygskin.com/script.js"
-  website_id: "932d953a-77fc-4bd2-9071-1f18004f736f"
-  domains: "scottratchford.com"
+# umami:
+#   script: "https://data.pygskin.com/script.js"
+#   website_id: "932d953a-77fc-4bd2-9071-1f18004f736f"
+#   domains: "scottratchford.com"
