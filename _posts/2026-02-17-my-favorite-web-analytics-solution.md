@@ -6,7 +6,7 @@ categories: [blog]
 tags: [website, analytics]
 ---
 
-When I launched my previous web project, [Pygskin](https://pygskin.com/), I wanted to set up analytics, but my paltry monthly budget was entirely allocated to hosting. Being privacy-conscious, I didn't like the idea of handing over all my vistors' data to advertising companies that offer intensive web analytics services. There's no need to collect personally identifiable information on my visitors. I just want simple metrics like pages viewed, time spent on the site, and what country they connected from.
+When I launched my previous web project, Pygskin, I wanted to set up analytics, but my paltry monthly budget was entirely allocated to hosting. Being privacy-conscious, I didn't like the idea of handing over all my vistors' data to advertising companies that offer intensive web analytics services. There's no need to collect personally identifiable information on my visitors. I just want simple metrics like pages viewed, time spent on the site, and what country they connected from.
 
 One of my goals with Pygskin was to configure every single component myself. It was a deeply involved and often frustrating experience, but it taught me more than any other project I'd taken on up to that point. It was important to me that I understand every single part of the project, from containerization to database design. This gave me total control over the even the smallest components of the code.
 

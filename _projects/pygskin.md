@@ -6,7 +6,6 @@ categories: [Software, AI/ML, Web]
 cover_image: /assets/images/macbook_table.jpg
 links:
   github: https://github.com/KyberCritter/Pygskin-Webapp
-  live: https://pygskin.com
 date: 2026-02-13
 featured: true
 ---
@@ -35,7 +34,3 @@ Pygskin is a comprehensive football analytics platform that leverages machine le
 - Processed and analyzed thousands of historical play-by-play records
 - Achieved meaningful prediction accuracy for play call tendencies
 - Deployed production-ready web application with high availability
-
-## Learn More
-
-Visit the live application at [pygskin.com](https://pygskin.com) to explore college football analytics and predictions.
