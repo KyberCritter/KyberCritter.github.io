@@ -51,6 +51,7 @@ defaults:
 # Exclude from processing
 exclude:
   - README.md
+  - AGENTS.md
   - .gitignore
   - .vscode
   - scripts

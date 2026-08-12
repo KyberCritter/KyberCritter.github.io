@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "skills": {
+    "paths": [
+      "../.claude/skills"
+    ]
+  },
+  "permission": {
+    "bash": {
+      "git rebase *": "deny",
+      "git reset *": "deny",
+      "git push -f *": "deny",
+      "git push --force*": "deny"
+    }
+  }
+}

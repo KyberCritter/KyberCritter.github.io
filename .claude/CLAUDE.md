@@ -1,16 +1,12 @@
 # scottratchford.com
 
-## Style
+The single source of truth for agent guidance is [AGENTS.md](/AGENTS.md),
+read by both Claude Code and opencode. Follow it for project overview, build
+commands, style, content conventions, and git rules.
 
-### Markdown
+Claude Code specifics:
 
-- Include blank lines around lists
-- Never end a file in 2 blank lines
-
-### Dates
-
-Use the current date when updating Jekyll page files.
-
-## git
-
-Do not edit the git history. You may view it, but you may not add, commit, push, etc.
+- `.claude/settings.json` runs `scripts/setup.sh` at session start, which
+  installs Ruby/Node/Playwright dependencies for cloud environments.
+- The `scrolling-screenshot` skill lives at
+  `.claude/skills/scrolling-screenshot/SKILL.md`.

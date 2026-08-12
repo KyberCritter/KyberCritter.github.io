@@ -1,3 +1,8 @@
+---
+name: scrolling-screenshot
+description: Take a full-page scrolling screenshot of the locally hosted Jekyll site. Use when capturing desktop or mobile screenshots of any page for visual review, layout verification, or previewing changes before going live.
+---
+
 # Scrolling Screenshot
 
 Take a full-page scrolling screenshot of the locally hosted Jekyll site.
