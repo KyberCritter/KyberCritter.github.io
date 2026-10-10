@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-8 pt-8 flex items-center justify-center gap-4">
+        <div class="border-t border-white mt-8 pt-8 flex items-center justify-center gap-4">
             <span class="text-sm text-gray-300 font-medium">Share this page</span>
             <div class="flex gap-4">
                 <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}"
@@ -74,8 +74,12 @@
             </div>
         </div>
 
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+        <div class="border-t border-white mt-8 pt-8 text-center text-gray-300">
             <p>&copy; {{ 'now' | date: "%Y" }} Scott Ratchford. All rights reserved.</p>
+            <p class="mt-2 text-sm">
+                All views and opinions expressed on this website are my own and do not represent
+                those of my employer or any other organization.
+            </p>
             <p class="mt-2">
                 <a href="/license" class="hover:text-white transition">License</a> ·
                 <a href="/sitemap.xml" class="hover:text-white transition">Sitemap</a>
