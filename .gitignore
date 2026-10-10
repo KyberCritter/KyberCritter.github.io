@@ -15,3 +15,6 @@ vendor
 
 # Tailwind CLI (standalone binary)
 tailwindcss.exe
+
+# Node (check-accessibility audit)
+node_modules

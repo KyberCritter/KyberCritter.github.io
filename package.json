@@ -1,0 +1,11 @@
+{
+  "name": "scottratchford.com",
+  "private": true,
+  "scripts": {
+    "check-accessibility": "node scripts/check-accessibility-scan.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "playwright": "^1.62.1"
+  }
+}
