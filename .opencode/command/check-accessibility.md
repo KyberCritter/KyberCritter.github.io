@@ -3,8 +3,7 @@ description: Run an axe-core accessibility (WCAG) audit of the Jekyll site and f
 agent: build
 ---
 
-Run the accessibility audit against the locally served Jekyll site and fix
-the issues it finds.
+Run the accessibility audit against the locally served Jekyll site and fix the issues it finds.
 
 1. Install Node deps if needed: `npm install` and `npx playwright install chromium`.
 2. Build and serve the site: `bundle exec jekyll serve --host 0.0.0.0 --port 4000` in the background.
