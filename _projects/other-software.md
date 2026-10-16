@@ -24,7 +24,7 @@ A collection of open-source software projects showcasing various technical skill
         <div class="md:flex-shrink-0 md:w-80 bg-gray-100 overflow-hidden">
             <img src="/assets/images/GBScribe_gba.jpg"
                  alt="A translucent crimson Game Boy Advance running GBScribe, showing the contact card screen with a scannable QR Code, connected to a Game Boy Printer by a Link Cable"
-                 class="w-full h-56 md:h-full object-cover">
+                 class="w-full h-56 md:h-full object-cover md:object-[38%_50%]">
         </div>
         <div class="p-8">
             <div class="flex items-center gap-3 mb-3">
