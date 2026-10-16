@@ -80,4 +80,16 @@
 }
 .prose .image-row figure.video-embed {
   width: 75%;
+  max-width: 100%;
+}
+.prose figure.video-embed iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+@media (max-width: 640px) {
+  .prose .image-row figure.video-embed {
+    width: 100%;
+  }
 }
