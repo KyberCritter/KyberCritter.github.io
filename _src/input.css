@@ -78,3 +78,6 @@
 .prose .image-row figure img {
   width: 100%;
 }
+.prose .image-row figure.video-embed {
+  width: 75%;
+}
