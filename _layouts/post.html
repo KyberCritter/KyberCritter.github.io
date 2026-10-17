@@ -18,6 +18,16 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
+        {% if page.links %}
+        <div class="flex flex-wrap gap-4 mt-6">
+            {% if page.links.github %}
+            <a href="{{ page.links.github }}" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition">
+                <i class="fab fa-github"></i> View on GitHub
+            </a>
+            {% endif %}
+        </div>
+        {% endif %}
         <div class="mt-6">
             {% include share-buttons.html %}
         </div>
