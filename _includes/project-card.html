@@ -6,6 +6,14 @@
     {% endif %}
 
     <div class="p-6">
+        <h3 class="text-xl font-bold text-primary mb-2">
+            <a href="{{ include.url }}" class="hover:text-accent transition">
+                {{ include.title }}
+            </a>
+        </h3>
+
+        <p class="text-gray-600 mb-3 line-clamp-3">{{ include.description }}</p>
+
         <div class="flex flex-wrap gap-2 mb-3">
             {% for category in include.categories %}
             <span class="px-2 py-1 bg-accent/10 text-accent rounded text-xs font-semibold uppercase tracking-wide">
@@ -13,14 +21,6 @@
             </span>
             {% endfor %}
         </div>
-
-        <h3 class="text-xl font-bold text-primary mb-2">
-            <a href="{{ include.url }}" class="hover:text-accent transition">
-                {{ include.title }}
-            </a>
-        </h3>
-
-        <p class="text-gray-600 mb-4 line-clamp-3">{{ include.description }}</p>
 
         <a href="{{ include.url }}" class="inline-flex items-center text-accent hover:text-primary font-medium transition">
             View Project <i class="fas fa-arrow-right ml-2"></i>
