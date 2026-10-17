@@ -4,8 +4,6 @@ title: "Pygskin - Football Analytics Platform"
 description: "Django web application using ML to predict college football play calls, deployed on DigitalOcean with Nginx/Gunicorn"
 categories: [Software, AI/ML, Web]
 cover_image: /assets/images/macbook_table.jpg
-links:
-  github: https://github.com/KyberCritter/Pygskin-Webapp
 date: 2026-02-13
 featured: true
 ---
@@ -13,6 +11,14 @@ featured: true
 ## Overview
 
 Pygskin is a comprehensive football analytics platform that leverages machine learning to provide insights into college football play calling patterns. The application predicts what plays teams are likely to call based on historical data and game situations.
+
+<div class="text-center my-6">
+<a href="https://github.com/KyberCritter/Pygskin-Webapp" target="_blank" rel="noopener"
+   class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
+   style="color: #fff; text-decoration: none;">
+    <i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
 
 ## Key Features
 
