@@ -4,6 +4,16 @@ title: "PixelPoach: Transferring Photos from Game Boy Camera to PC"
 date: 2026-10-20
 categories: [blog, software]
 tags: [website, gba, game, homebrew, camera]
+gallery:
+  - image: /assets/images/PixelPoach_museum.png
+    alt: A pixelated Game Boy Camera photo of the exterior of the Smithsonian Museum of the American Latino
+    caption: The exterior of the Smithsonian Museum of the American Latino
+  - image: /assets/images/PixelPoach_Washington_monument.png
+    alt: A pixelated Game Boy Camera photo of the DC skyline in silhouette, with the Washington Monument visible on the right
+    caption: The Washington Monument on the right of the DC skyline
+  - image: /assets/images/PixelPoach_metro_tunnel.png
+    alt: A pixelated Game Boy Camera photo of a Washington, DC metro tunnel
+    caption: A Washington, DC metro tunnel
 ---
 
 <div class="image-row">
@@ -16,7 +26,7 @@ tags: [website, gba, game, homebrew, camera]
 I'm back with another strange piece of custom software for the Game Big Advance. This time, it's PixelPoach, a program to fetch photos from a real Game Boy Camera by tricking the camera into thinking it's communicating with another copy of the same program. This allows me to fetch the images from the Game Boy Camera, save them to my GBA flash cartridge's MicroSD card, and view them on my computer.
 
 <figure>
-<img src="/assets/images/PixelPoach_metro_tunnel.jpg" alt="A low-resolution photo of a metro tunnel">
+<img src="/assets/images/PixelPoach_metro_tunnel.png" alt="A low-resolution photo of a metro tunnel">
 <figcaption>A photo of a Washington, DC metro tunnel extracted from my Game Boy Camera save file</figcaption>
 </figure>
 
@@ -67,12 +77,10 @@ You could use this to load custom images onto the cartridge even if they weren't
 
 You can also view all the photos on the save file.
 
-<!--
 <figure>
-<img src="/assets/images/pixelpoach_photo_viewer.png" alt="PixelPoach photo viewer running in the mGBA emulator">
-<figcaption>Browsing stored photos in PixelPoach</figcaption>
+<img src="/assets/images/PixelPoach_metro_tunnel_screenshot.png" alt="A low-resolution photo of a metro tunnel, seen within the PixelPoach view menu">
+<figcaption>A photo of the Washington, DC metro, as seen from the PixelPoach view menu</figcaption>
 </figure>
--->
 
 ### Export to PNG
 
@@ -83,7 +91,7 @@ Using the save extraction script on your PC, you can convert the saved images to
 After I had a working prototype, I spent an afternoon walking around Washington, DC's beautiful National Mall.
 Here are some of my favorite shots!
 
-INSERT_PHOTO_GALLERY_HERE
+{% include carousel.html id="photo-gallery" label="Photo gallery" images=page.gallery %}
 
 ## Future Considerations
 

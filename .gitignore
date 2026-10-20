@@ -18,3 +18,5 @@ tailwindcss.exe
 
 # Node (check-accessibility audit)
 node_modules
+
+/.playwright-mcp

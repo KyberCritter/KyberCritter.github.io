@@ -1,0 +1,52 @@
+{%- comment -%}
+Reusable image carousel.
+
+Styles: assets/css/tailwind.css (compiled from _src/input.css)
+Script: assets/js/carousel.js (loaded by _layouts/default.html)
+
+Usage: define the slides in page, project, or post front matter...
+
+    gallery:
+      - image: /assets/images/example.png
+        alt: Description for screen readers
+        caption: Optional visible caption
+      - image: /assets/images/example-2.jpg
+        alt: Description for screen readers
+
+...then render the carousel in the body:
+
+    {% include carousel.html id="photo-gallery" label="Photo gallery" images=page.gallery %}
+
+`id` must be unique on the page. `label` names the carousel for screen
+readers. `images` is any array of objects with `image`, `alt`, and optional
+`caption` keys.
+{%- endcomment -%}
+{%- if include.images and include.images.size > 0 -%}
+{%- assign carousel_id = include.id | default: "carousel" -%}
+<div class="carousel" id="carousel-{{ carousel_id }}" data-carousel role="region" aria-roledescription="carousel" aria-label="{{ include.label | default: 'Image gallery' | escape }}">
+<div class="carousel-viewport">
+<div class="carousel-track" data-carousel-track tabindex="0" aria-label="Slides, use the arrow keys to browse">
+{%- for item in include.images %}
+<figure class="carousel-slide" data-carousel-slide aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ forloop.length }}">
+<img src="{{ item.image | relative_url }}" alt="{{ item.alt | default: item.caption | escape }}"{% if forloop.first %} loading="eager"{% else %} loading="lazy"{% endif %}>
+{% if item.caption %}<figcaption>{{ item.caption | escape }}</figcaption>{% endif %}
+</figure>
+{%- endfor %}
+</div>
+<button class="carousel-nav carousel-prev" type="button" data-carousel-prev aria-label="Previous image">
+<i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+</button>
+<button class="carousel-nav carousel-next" type="button" data-carousel-next aria-label="Next image">
+<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+</button>
+</div>
+<div class="carousel-footer">
+<div class="carousel-dots">
+{%- for item in include.images %}
+<button class="carousel-dot" type="button" data-carousel-dot aria-label="Go to image {{ forloop.index }}{% if item.caption %}: {{ item.caption | escape }}{% endif %}"></button>
+{%- endfor %}
+</div>
+<p class="carousel-status" data-carousel-status aria-live="polite">1 of {{ include.images.size }}</p>
+</div>
+</div>
+{%- endif -%}
