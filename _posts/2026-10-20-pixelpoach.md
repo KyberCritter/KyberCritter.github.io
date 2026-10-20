@@ -25,6 +25,14 @@ gallery:
 
 I'm back with another strange piece of custom software for the Game Big Advance. This time, it's PixelPoach, a program to fetch photos from a real Game Boy Camera by tricking the camera into thinking it's communicating with another copy of the same program. This allows me to fetch the images from the Game Boy Camera, save them to my GBA flash cartridge's MicroSD card, and view them on my computer.
 
+<div class="text-center my-6">
+<a href="https://github.com/KyberCritter/PixelPoach" target="_blank" rel="noopener"
+   class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
+   style="color: #fff; text-decoration: none;">
+    <i class="fab fa-github"></i> View on GitHub
+</a>
+</div>
+
 <figure>
 <img src="/assets/images/PixelPoach_metro_tunnel.png" alt="A low-resolution photo of a metro tunnel">
 <figcaption>A photo of a Washington, DC metro tunnel extracted from my Game Boy Camera save file</figcaption>
