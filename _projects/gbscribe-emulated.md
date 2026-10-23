@@ -4,9 +4,6 @@ title: "GBScribe Emulated"
 description: "Interactive browser demo of GBScribe, the Game Boy Advance word processor and pixel-art tool, connected to an emulated Game Boy Printer"
 categories: [Software, Web]
 cover_image: /assets/images/GBScribe_gba.jpg
-links:
-  github: https://github.com/KyberCritter/GBScribe-Emulated
-  live: /gbscribe-emulator/
 date: 2026-10-22
 featured: false
 ---
@@ -15,9 +12,16 @@ featured: false
 
 GBScribe Emulated is a browser demo of [GBScribe](/blog/2026/10/15/gbscribe/), my word processor and pixel-art drawing tool for the Game Boy Advance, connected to an emulated Game Boy Printer. It runs the unmodified GBScribe ROM in a WebAssembly build of mGBA, so you can type, draw, print, tear off the paper, and export the result without owning any of the hardware.
 
-<div class="text-center my-6">
-<a href="/gbscribe-emulator/" class="inline-flex items-center gap-2 px-5 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-primary transition">
-    <i class="fas fa-gamepad"></i> Try GBScribe in Your Browser
+<div class="flex flex-wrap justify-center gap-3 my-6">
+<a href="/gbscribe-emulator/"
+   class="inline-flex items-center gap-2 px-4 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-primary transition"
+   style="color: #fff; text-decoration: none;">
+    <i class="fas fa-external-link-alt"></i> Try Now
+</a>
+<a href="https://github.com/KyberCritter/GBScribe-Emulated" target="_blank" rel="noopener"
+   class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg font-semibold hover:bg-gray-700 transition"
+   style="color: #fff; text-decoration: none;">
+    <i class="fab fa-github"></i> View on GitHub
 </a>
 </div>
 
