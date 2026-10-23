@@ -108,7 +108,11 @@ if (typeof window === 'undefined') {
 
         // If we're already coi: do nothing. Perhaps it's due to this script doing its job, or COOP/COEP are
         // already set from the origin server. Also if the browser has no notion of crossOriginIsolated, just give up here.
-        if (window.crossOriginIsolated !== false || !coi.shouldRegister()) return;
+        if (window.crossOriginIsolated !== false) {
+            window.sessionStorage.removeItem("coiReloadedForIsolation");
+            return;
+        }
+        if (!coi.shouldRegister()) return;
 
         if (!window.isSecureContext) {
             !coi.quiet && console.log("COOP/COEP Service Worker not registered, a secure context is required.");
@@ -131,12 +135,32 @@ if (typeof window === 'undefined') {
                     coi.doReload();
                 });
 
-                // If the registration is active, but it's not controlling the page
-                if (registration.active && !n.serviceWorker.controller) {
+                if (n.serviceWorker.controller) return;
+
+                // On a first visit the worker is only *installing* when register()
+                // resolves, so `registration.active` is null and this document is not
+                // controlled yet. Waiting for activation and then reloading is what
+                // actually applies COOP/COEP: cross-origin isolation is decided by the
+                // navigation response, so clients.claim() alone cannot turn it on for
+                // the page that registered the worker.
+                const reloadForKey = () => {
+                    if (window.sessionStorage.getItem("coiReloadedForIsolation")) {
+                        !coi.quiet && console.error(
+                            "COOP/COEP Service Worker is active but this page is still not cross-origin isolated. Reload the page manually."
+                        );
+                        return;
+                    }
+                    window.sessionStorage.setItem("coiReloadedForIsolation", "1");
                     !coi.quiet && console.log("Reloading page to make use of COOP/COEP Service Worker.");
                     window.sessionStorage.setItem("coiReloadedBySelf", "notcontrolling");
                     coi.doReload();
+                };
+
+                if (registration.active) {
+                    reloadForKey();
+                    return;
                 }
+                n.serviceWorker.ready.then(reloadForKey, reloadForKey);
             },
             (err) => {
                 !coi.quiet && console.error("COOP/COEP Service Worker failed to register:", err);
