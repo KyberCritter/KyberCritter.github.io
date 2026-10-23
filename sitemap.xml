@@ -34,6 +34,11 @@ layout: null
 		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 	</url>
 	<url>
+		<loc>{{ site.url }}/gbscribe-emulator/</loc>
+		<priority>0.80</priority>
+		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	</url>
+	<url>
 		<loc>{{ site.url }}/license</loc>
 		<priority>0.50</priority>
 		<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
