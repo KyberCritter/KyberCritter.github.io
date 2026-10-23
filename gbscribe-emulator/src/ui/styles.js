@@ -103,7 +103,8 @@ export function buildStyles() {
 }
 .gbs-title h2 .gbs-x { color: var(--gbs-crimson); padding: 0 .18em; }
 .gbs-title p {
-  max-width: 62ch;
+  /* Local tweak: let the intro subtitle use the full header width. */
+  max-width: 100%;
   margin: 10px 0 0;
   color: var(--gbs-ink-soft);
   font-size: 13.5px;
