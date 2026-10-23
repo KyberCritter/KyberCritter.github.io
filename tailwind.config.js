@@ -7,6 +7,7 @@ module.exports = {
     './_posts/**/*.{html,md}',
     './*.html',
     './*.md',
+    './gbscribe-emulator/**/*.html',
   ],
   theme: {
     extend: {
