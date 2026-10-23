@@ -128,6 +128,16 @@ export function mountDemo(host, options = {}) {
     document.head.appendChild(fontStyle);
   }
   shadow.innerHTML = `<style>${buildStyles()}</style>${buildTemplate()}`;
+  // The printer runs on a worker and shares memory with the emulator core, which
+  // needs SharedArrayBuffer. Browsers only expose that to cross-origin isolated
+  // documents, and the COOP/COEP service worker can only isolate a page by
+  // serving its next navigation. Fail with an explanation rather than a
+  // ReferenceError from inside the printer when that has not happened yet.
+  if (typeof SharedArrayBuffer === 'undefined' || !window.crossOriginIsolated) {
+    throw new Error(
+      'The emulator needs a cross-origin isolated page. Reload this page to start GBScribe.',
+    );
+  }
   const demo = new GBScribeDemo(host, shadow, options);
   demo.init();
   return demo;

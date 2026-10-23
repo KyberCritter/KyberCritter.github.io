@@ -63,6 +63,12 @@ exclude:
 include:
   - _pages
 
+# The github-pages gem loads jekyll-readme-index, which turns every README.md into
+# its directory's index.html. That publishes the emulator's vendor and license
+# notes as stray pages, so switch it off.
+readme_index:
+  enabled: false
+
 # Plugins
 plugins:
   - jekyll-feed

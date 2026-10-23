@@ -7,22 +7,42 @@ const isOff = (value) => /^(false|0|no|off)$/i.test(value || '');
 class GBScribeEmulator extends HTMLElement {
   connectedCallback() {
     if (this._demo) return;
-    this._demo = mountDemo(this, {
-      romUrl: this.getAttribute('rom-url') || asset('assets/roms/GBScribe.gba'),
-      biosUrl: this.getAttribute('bios-url') || asset('vendor/gbajs/resources/bios.bin'),
-      vendorBase: this.getAttribute('vendor-base') || asset('vendor/gbajs/js/'),
-      fontUrl: this.getAttribute('font-url') || asset('assets/fonts/PressStart2P-Regular.woff2'),
-      gbaImageUrl: this.getAttribute('gba-image') || asset('assets/img/gba.webp'),
-      printerImageUrl: this.getAttribute('printer-image') || asset('assets/img/printer.webp'),
-      printerSwitchOnUrl:
-        this.getAttribute('printer-switch-on') || asset('assets/img/printer-switch-on.webp'),
-      printerSwitchOffUrl:
-        this.getAttribute('printer-switch-off') || asset('assets/img/printer-switch-off.webp'),
-      guidePrompt: !isOff(this.getAttribute('guide-prompt')),
-    });
+    let demo;
+    try {
+      demo = mountDemo(this, {
+        romUrl: this.getAttribute('rom-url') || asset('assets/roms/GBScribe.gba'),
+        biosUrl: this.getAttribute('bios-url') || asset('vendor/gbajs/resources/bios.bin'),
+        vendorBase: this.getAttribute('vendor-base') || asset('vendor/gbajs/js/'),
+        fontUrl: this.getAttribute('font-url') || asset('assets/fonts/PressStart2P-Regular.woff2'),
+        gbaImageUrl: this.getAttribute('gba-image') || asset('assets/img/gba.webp'),
+        printerImageUrl: this.getAttribute('printer-image') || asset('assets/img/printer.webp'),
+        printerSwitchOnUrl:
+          this.getAttribute('printer-switch-on') || asset('assets/img/printer-switch-on.webp'),
+        printerSwitchOffUrl:
+          this.getAttribute('printer-switch-off') || asset('assets/img/printer-switch-off.webp'),
+        guidePrompt: !isOff(this.getAttribute('guide-prompt')),
+      });
+    } catch (error) {
+      this.showBootError(error);
+      return;
+    }
+    this._demo = demo;
     this.setAttribute('data-ready', '');
     window.__gbsDemo = this._demo;
     this.dispatchEvent(new CustomEvent('gbs-ready', { bubbles: true, detail: this._demo }));
+  }
+
+  /**
+   * The template is already rendered when mounting fails, so replace the
+   * "Loading GBScribe…" overlay with the reason instead of spinning forever.
+   */
+  showBootError(error) {
+    console.error(error);
+    const loading = this.shadowRoot && this.shadowRoot.querySelector('[data-loading]');
+    if (!loading) return;
+    loading.classList.remove('is-hidden');
+    loading.style.whiteSpace = 'pre-wrap';
+    loading.textContent = `GBScribe could not start.\n\n${error?.message || 'Unknown error'}`;
   }
 
   disconnectedCallback() {
