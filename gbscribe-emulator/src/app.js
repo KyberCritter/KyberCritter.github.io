@@ -658,16 +658,17 @@ class GBScribeDemo {
     cable.setAttribute('viewBox', `0 0 ${stageRect.width.toFixed(1)} ${stageRect.height.toFixed(1)}`);
     if (window.matchMedia('(max-width: 1040px)').matches) {
       // With the devices stacked, there is no single path between the ports.
-      // Let each end of the cable leave its port and run off the component, so
-      // the two are still visibly connected somewhere out of view.
+      // Let each end of the cable leave its port and run off the right of the
+      // component, so the two are still visibly connected somewhere out of view.
+      const exitX = stageRect.width + 40;
       const exitY = Math.max(2, sy - 12);
-      const r = Math.max(2, Math.min(12, (sy - exitY) / 2, (sx + 40) / 2));
+      const r = Math.max(2, Math.min(12, (sy - exitY) / 2, (exitX - sx) / 2));
       const d =
         `M ${sx.toFixed(1)} ${sy.toFixed(1)} ` +
         `L ${sx.toFixed(1)} ${(exitY + r).toFixed(1)} ` +
-        `Q ${sx.toFixed(1)} ${exitY.toFixed(1)} ${(sx - r).toFixed(1)} ${exitY.toFixed(1)} ` +
-        `L -40 ${exitY.toFixed(1)} ` +
-        `M ${(stageRect.width + 40).toFixed(1)} ${ey.toFixed(1)} ` +
+        `Q ${sx.toFixed(1)} ${exitY.toFixed(1)} ${(sx + r).toFixed(1)} ${exitY.toFixed(1)} ` +
+        `L ${exitX.toFixed(1)} ${exitY.toFixed(1)} ` +
+        `M ${exitX.toFixed(1)} ${ey.toFixed(1)} ` +
         `L ${ex.toFixed(1)} ${ey.toFixed(1)}`;
       cablePath.setAttribute('d', d);
       cableHighlight.setAttribute('d', d);
