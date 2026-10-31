@@ -15,6 +15,12 @@ youtube_username: scottratchford
 profile_image: /assets/images/scott_shibuya_square.jpg
 homepage_profile_image: /assets/images/scott_shibuya_square_512.jpg
 
+# Homepage story; post is the published post URL path, including the trailing slash.
+featured_story:
+  post: /blog/2026/10/20/tuna-mp3-player/
+  title: Turning a Game Boy Advance into an MP3 player
+  description: How I built Tuna to send music from a Wii to a Game Boy Advance.
+
 # Build settings
 theme: null  # Using custom layouts
 markdown: kramdown

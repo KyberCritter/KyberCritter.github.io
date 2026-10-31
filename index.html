@@ -29,10 +29,20 @@ description: Scott Ratchford - Software developer, maker, and builder. Proficien
             <p class="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
                 Software developer for systems new and old.
             </p>
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-                Building innovative solutions with Python, AI/ML, and full-stack development.
-                Passionate about college football analytics, 3D printing, and creating tools that make a real impact.
-            </p>
+            {% assign featured_story = site.posts | where: "url", site.featured_story.post | first %}
+            {% if featured_story %}
+            <aside class="mb-10 max-w-2xl mx-auto text-left rounded-xl border border-white/30 bg-white/10 p-6" aria-labelledby="featured-story-title">
+                <p class="text-sm font-bold uppercase tracking-wide text-gray-100 mb-2">Featured story</p>
+                <h2 id="featured-story-title" class="text-xl md:text-2xl font-bold mb-2">
+                    <a href="{{ featured_story.url | relative_url }}" class="text-white underline underline-offset-4 hover:text-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+                        {{ site.featured_story.title | default: featured_story.title | escape }} <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </h2>
+                {% if site.featured_story.description %}
+                <p class="text-gray-100">{{ site.featured_story.description | escape }}</p>
+                {% endif %}
+            </aside>
+            {% endif %}
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="/projects" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
                     View My Work
