@@ -63,20 +63,7 @@ description: Scott Ratchford - Software developer, maker, and builder. Proficien
             </div>
 
             <!-- Social Links -->
-            <div class="mt-12 flex justify-center gap-6">
-                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener"
-                   class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" aria-label="GitHub">
-                    <i class="fab fa-github text-4xl"></i>
-                </a>
-                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
-                   class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin text-4xl"></i>
-                </a>
-                <a href="mailto:{{ site.email }}"
-                   class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" aria-label="Email">
-                    <i class="fas fa-envelope text-4xl"></i>
-                </a>
-            </div>
+            {% include contact-icons.html row_class="mt-12 flex justify-center gap-6" link_class="text-white hover:text-yellow-300 transition-colors transform hover:scale-110" icon_class="text-4xl" %}
         </div>
     </div>
     <div class="absolute bottom-0 left-0 right-0 pointer-events-none">
