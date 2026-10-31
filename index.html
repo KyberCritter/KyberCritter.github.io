@@ -13,8 +13,9 @@ description: Scott Ratchford - Software developer, maker, and builder. Proficien
         <div class="text-center">
             <!-- Profile Image -->
             <div class="mb-8 flex justify-center">
-                {% if site.profile_image %}
-                <img src="{{ site.profile_image }}" alt="Scott Ratchford" class="rounded-full shadow-2xl w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white">
+                {% assign homepage_profile_image = site.homepage_profile_image | default: site.profile_image %}
+                {% if homepage_profile_image %}
+                <img src="{{ homepage_profile_image }}" alt="Scott Ratchford" width="512" height="512" class="rounded-full shadow-2xl w-48 h-48 md:w-64 md:h-64 object-cover border-4 border-white">
                 {% else %}
                 <div class="bg-white rounded-full shadow-2xl w-48 h-48 md:w-64 md:h-64 flex items-center justify-center border-4 border-white">
                     <i class="fas fa-user text-8xl text-primary opacity-50"></i>
@@ -26,12 +27,29 @@ description: Scott Ratchford - Software developer, maker, and builder. Proficien
                 Hi, I'm <span class="text-yellow-300">Scott Ratchford</span>.
             </h1>
             <p class="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
-                Software developer, maker, and builder
+                Software developer for systems new and old.
             </p>
-            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-                Building innovative solutions with Python, AI/ML, and full-stack development.
-                Passionate about college football analytics, 3D printing, and creating tools that make a real impact.
-            </p>
+            {% assign featured_story = site.posts | where: "url", site.featured_story.post | first %}
+            {% if featured_story %}
+            <aside class="mb-10 max-w-2xl mx-auto text-left rounded-xl border border-white/30 bg-white/10 p-6" aria-labelledby="featured-story-title">
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    {% if site.featured_story.image %}
+                    <img src="{{ site.featured_story.image | relative_url }}" alt="{{ site.featured_story.image_alt | escape }}" class="w-full sm:w-48 h-48 object-contain rounded-lg flex-shrink-0">
+                    {% endif %}
+                    <div class="min-w-0 w-full">
+                <p class="text-sm font-bold uppercase tracking-wide text-gray-100 mb-2">Featured story</p>
+                <h2 id="featured-story-title" class="text-xl md:text-2xl font-bold mb-2">
+                    <a href="{{ featured_story.url | relative_url }}" class="text-white underline underline-offset-4 hover:text-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+                        {{ site.featured_story.title | default: featured_story.title | escape }} <span aria-hidden="true">&rarr;</span>
+                    </a>
+                </h2>
+                {% if site.featured_story.description %}
+                <p class="text-gray-100">{{ site.featured_story.description | escape }}</p>
+                {% endif %}
+                    </div>
+                </div>
+            </aside>
+            {% endif %}
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="/projects" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
                     View My Work

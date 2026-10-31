@@ -105,6 +105,7 @@ Here are some of my favorite shots!
 
 The Game Boy Camera deletes saved images after transferring them to another camera.
 To avoid this, we could instead emulate a Game Boy Printer and "print" to our flash cartridge.
+My [AdvancePrint](https://github.com/KyberCritter/AdvancePrint) library provides Game Boy Printer communication routines for Game Boy Advance homebrew that could support this approach.
 This would work similarly to the existing solution without deleting the photo from our camera.
 
 While developing the program, I lost or corrupted several of my favorite photos in the transfer process.
