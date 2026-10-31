@@ -35,24 +35,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="flex space-x-4">
-                    <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener"
-                       class="text-gray-300 hover:text-white transition" aria-label="GitHub">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
-                       class="text-gray-300 hover:text-white transition" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@{{ site.youtube_username }}" target="_blank" rel="noopener"
-                       class="text-gray-300 hover:text-white transition" aria-label="YouTube">
-                        <i class="fab fa-youtube text-2xl"></i>
-                    </a>
-                    <a href="mailto:{{ site.email }}"
-                       class="text-gray-300 hover:text-white transition" aria-label="Email">
-                        <i class="fas fa-envelope text-2xl"></i>
-                    </a>
-                </div>
+                {% include contact-icons.html row_class="flex space-x-4" link_class="text-gray-300 hover:text-white transition" icon_class="text-2xl" %}
             </div>
         </div>
 
