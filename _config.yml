@@ -20,6 +20,8 @@ featured_story:
   post: /blog/2026/10/20/tuna-mp3-player/
   title: Turning a Game Boy Advance into an MP3 player
   description: How I built Tuna to send music from a Wii to a Game Boy Advance.
+  image: /assets/images/Tuna_gba_in_hand_with_cable_and_wiimote.jpg
+  image_alt: A Game Boy Advance running Tuna beside a Wii Remote and a GameCube-to-GBA link cable
 
 # Build settings
 theme: null  # Using custom layouts

@@ -32,6 +32,11 @@ description: Scott Ratchford - Software developer, maker, and builder. Proficien
             {% assign featured_story = site.posts | where: "url", site.featured_story.post | first %}
             {% if featured_story %}
             <aside class="mb-10 max-w-2xl mx-auto text-left rounded-xl border border-white/30 bg-white/10 p-6" aria-labelledby="featured-story-title">
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    {% if site.featured_story.image %}
+                    <img src="{{ site.featured_story.image | relative_url }}" alt="{{ site.featured_story.image_alt | escape }}" class="w-full sm:w-48 h-48 object-contain rounded-lg flex-shrink-0">
+                    {% endif %}
+                    <div class="min-w-0 w-full">
                 <p class="text-sm font-bold uppercase tracking-wide text-gray-100 mb-2">Featured story</p>
                 <h2 id="featured-story-title" class="text-xl md:text-2xl font-bold mb-2">
                     <a href="{{ featured_story.url | relative_url }}" class="text-white underline underline-offset-4 hover:text-yellow-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
@@ -41,6 +46,8 @@ description: Scott Ratchford - Software developer, maker, and builder. Proficien
                 {% if site.featured_story.description %}
                 <p class="text-gray-100">{{ site.featured_story.description | escape }}</p>
                 {% endif %}
+                    </div>
+                </div>
             </aside>
             {% endif %}
             <div class="flex flex-wrap justify-center gap-4">
