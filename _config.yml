@@ -13,6 +13,7 @@ youtube_username: scottratchford
 
 # Profile image
 profile_image: /assets/images/scott_shibuya_square.jpg
+homepage_profile_image: /assets/images/scott_shibuya_square_512.jpg
 
 # Build settings
 theme: null  # Using custom layouts
