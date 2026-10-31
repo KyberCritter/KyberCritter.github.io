@@ -10,6 +10,9 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+# The GBScribe emulator ships its own vendored runtime
+!/gbscribe-emulator/vendor/
+!/gbscribe-emulator/vendor/**
 .bundle
 /UPDATING.md
 

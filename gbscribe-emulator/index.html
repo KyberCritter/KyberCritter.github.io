@@ -1,0 +1,51 @@
+---
+layout: default
+title: GBScribe in Your Browser
+description: Interactive browser demo of GBScribe, the Game Boy Advance word processor and pixel-art tool, connected to an emulated Game Boy Printer.
+permalink: /gbscribe-emulator/
+---
+
+<div class="bg-gradient-to-br from-primary to-accent text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex items-center justify-center gap-4 mb-4">
+            <img src="/gbscribe-emulator/assets/img/logo.png" alt="GBScribe logo: a Game Boy with a quill and ink pot"
+                 class="w-14 h-14 md:w-16 md:h-16" style="image-rendering: pixelated;">
+            <h1 class="text-4xl md:text-5xl font-bold">GBScribe in Your Browser</h1>
+        </div>
+        <p class="text-xl text-gray-100 max-w-3xl mx-auto">
+            GBScribe is my word processor and drawing tool for the Game Boy Advance that prints to a real Game Boy Printer.
+            This is a fully emulated demonstration to give you the full experience without needing any of the hardware.
+        </p>
+        <div class="mt-6">
+            <a href="https://www.youtube.com/watch?v=50_xpLXg2HQ" target="_blank" rel="noopener"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition">
+                <i class="fab fa-youtube"></i> Watch GBScribe in Action
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div id="gbscribe-demo"></div>
+
+    <p class="mt-10 text-center text-sm text-gray-600">
+        Learn more on the <a href="/projects/gbscribe-emulated/" class="text-accent hover:text-primary font-semibold">project page</a>
+        or the <a href="https://github.com/KyberCritter/GBScribe-Emulated" target="_blank" rel="noopener" class="text-accent hover:text-primary font-semibold">GitHub repository</a>.
+    </p>
+
+    <p class="mt-4 mx-auto max-w-4xl text-center text-xs leading-relaxed text-gray-500">
+        GBScribe Emulated is copyright &copy; 2026 Scott Ratchford.
+        GBScribe Emulated's original code and documentation are available under the MIT License.
+        See <a href="https://github.com/KyberCritter/GBScribe-Emulated/blob/main/LICENSE.md" rel="noopener" class="underline hover:text-primary">LICENSE.md</a>.
+        GBScribe and AdvancePrint &copy; Scott Ratchford 2026. GBScribe and AdvancePrint are free software, licensed under the
+        <a href="https://github.com/KyberCritter/GBScribe/blob/master/LICENSE.md" rel="noopener" class="underline hover:text-primary">GBScribe MIT License</a>
+        and the <a href="https://github.com/KyberCritter/AdvancePrint/blob/main/LICENSE.md" rel="noopener" class="underline hover:text-primary">AdvancePrint MIT License</a>.
+        Browser emulation built on <a href="https://github.com/mgba-emu/mgba" rel="noopener" class="underline hover:text-primary">mGBA</a>
+        &copy; 2013&ndash;2025 Jeffrey Pfau and contributors, licensed under the
+        <a href="https://github.com/mgba-emu/mgba/blob/master/LICENSE" rel="noopener" class="underline hover:text-primary">Mozilla Public License 2.0</a>.
+        Not affiliated with, endorsed by, or sponsored by Nintendo. Game Boy, Game Boy Advance, and Game Boy Printer are trademarks of Nintendo.
+    </p>
+</div>
+
+<script src="/gbscribe-emulator/coi-serviceworker.js"></script>
+<script type="module" src="/gbscribe-emulator/src/gbscribe-demo.js"></script>
